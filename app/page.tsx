@@ -48,17 +48,14 @@ export default function Home() {
               <span className="stat-num">3</span>
               <span className="stat-label">User Roles</span>
             </div>
-            <div className="stat-divider" />
             <div className="stat">
               <span className="stat-num">14+</span>
               <span className="stat-label">Core Features</span>
             </div>
-            <div className="stat-divider" />
             <div className="stat">
               <span className="stat-num">3–4</span>
               <span className="stat-label">Week Delivery</span>
             </div>
-            <div className="stat-divider" />
             <div className="stat">
               <span className="stat-num">5</span>
               <span className="stat-label">Deliverables</span>
@@ -454,7 +451,6 @@ export default function Home() {
           display: flex; align-items: center; justify-content: center;
           font-size: 1.3rem;
         }
-        .brand-from { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
         .brand-name { font-size: 1.35rem; font-weight: 800; }
         .header-meta { text-align: right; }
         .meta-label { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
@@ -525,7 +521,6 @@ export default function Home() {
         .stat:last-child { border-right: none; }
         .stat-num { display: block; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; color: #60a5fa; }
         .stat-label { font-size: clamp(0.75rem, 1.5vw, 0.9rem); font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
-        .stat-divider { display: none; }
 
         /* ── LAYOUT ── */
         .content-wrapper { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.25rem; }
@@ -563,6 +558,9 @@ export default function Home() {
           padding: 1.5rem;
           box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
           border: 1px solid #e2e8f0;
+          overflow-wrap: break-word;
+          word-break: break-word;
+          min-width: 0;
         }
         .summary-card { font-size: clamp(1rem, 2vw, 1.1rem); font-weight: 500; color: #334155; line-height: 1.8; }
 
@@ -584,6 +582,9 @@ export default function Home() {
           border: 2px solid #e2e8f0;
           box-shadow: 0 2px 8px rgba(0,0,0,0.06);
           transition: transform 0.2s;
+          min-width: 0;
+          overflow-wrap: break-word;
+          word-break: break-word;
         }
         .role-card:hover { transform: translateY(-3px); }
         .customer-role { border-top: 4px solid #3b82f6; }
@@ -609,6 +610,9 @@ export default function Home() {
           border: 1px solid #e2e8f0;
           box-shadow: 0 1px 4px rgba(0,0,0,0.05);
           transition: box-shadow 0.2s, transform 0.2s;
+          min-width: 0;
+          overflow-wrap: break-word;
+          word-break: break-word;
         }
         .feature-card:hover { box-shadow: 0 4px 16px rgba(59,130,246,0.12); transform: translateY(-2px); }
         .feature-icon { font-size: 1.7rem; display: block; margin-bottom: 0.4rem; }
@@ -665,6 +669,7 @@ export default function Home() {
           flex: 1;
           background: white; border-radius: 11px; padding: 1.25rem;
           border: 1px solid #e2e8f0; box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+          min-width: 0; overflow-wrap: break-word; word-break: break-word;
         }
         .week1 .timeline-content { border-left: 4px solid #3b82f6; }
         .week2 .timeline-content { border-left: 4px solid #06b6d4; }
@@ -721,6 +726,7 @@ export default function Home() {
         .why-card {
           background: white; border-radius: 11px; padding: 1.25rem;
           border: 1px solid #e2e8f0; box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+          min-width: 0; overflow-wrap: break-word; word-break: break-word;
         }
         .why-icon { font-size: 2rem; display: block; margin-bottom: 0.6rem; }
         .why-card h5 { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem; }
@@ -768,14 +774,12 @@ export default function Home() {
         ════════════════════════════════ */
 
         @media (max-width: 1024px) {
-          .three-col { grid-template-columns: repeat(3, 1fr); }
-          .why-grid   { grid-template-columns: repeat(3, 1fr); }
           .features-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
         }
 
         @media (max-width: 768px) {
           .hero-section { padding: 2.5rem 1.25rem 2rem; }
-          .three-col { grid-template-columns: repeat(2, 1fr); }
+          .three-col { grid-template-columns: repeat(3, 1fr); }
           .why-grid   { grid-template-columns: repeat(2, 1fr); }
           .features-grid { grid-template-columns: repeat(2, 1fr); }
           .timeline::before { left: 56px; }
@@ -787,14 +791,22 @@ export default function Home() {
           .m-trigger        { display: none; }
           .tech-group { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
           .tech-group-title { min-width: unset; }
+          .meta-client { font-size: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+          .features-grid { grid-template-columns: 1fr; }
+          .brand-name { font-size: 1.15rem; }
+          .meta-client { font-size: 0.95rem; }
+          .meta-date { font-size: 0.82rem; }
         }
 
         @media (max-width: 600px) {
           .header-inner { flex-direction: column; align-items: flex-start; }
           .header-meta  { text-align: left; }
           .hero-stats { grid-template-columns: repeat(2, 1fr); }
-          .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-          .stat:nth-child(odd)  { border-right: 1px solid rgba(255,255,255,0.1); }
+          .stat { border-right: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
+          .stat:nth-child(2n) { border-right: none; }
           .stat:nth-last-child(-n+2) { border-bottom: none; }
           .content-wrapper { padding: 2rem 1rem; }
           .section { margin-bottom: 2.5rem; }
@@ -828,7 +840,10 @@ export default function Home() {
         }
 
         @media (max-width: 400px) {
-          .brand-name { font-size: 1rem; }
+          .brand-name { font-size: 0.95rem; }
+          .meta-client { font-size: 0.88rem; }
+          .meta-date { font-size: 0.78rem; }
+          .meta-badge { font-size: 0.68rem; padding: 0.15rem 0.5rem; }
           .stat-num   { font-size: 1.3rem; }
           .stat-label { font-size: 0.6rem; }
           .hero-title { font-size: 1.35rem; }
@@ -837,6 +852,8 @@ export default function Home() {
           .card { padding: 1.1rem; }
           .feature-card, .why-card, .role-card { padding: 1rem; }
           .milestone-header, .milestone-row { font-size: 0.75rem; }
+          .deliverable-icon { font-size: 1.25rem; }
+          .cta-section { padding: 2rem 1rem; }
         }
 
         @media print {
