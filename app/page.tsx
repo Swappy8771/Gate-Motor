@@ -17,7 +17,6 @@ export default function Home() {
               <Image src="/asset/logo.png" alt="India's No 1 Remote Gate Motor Logo" width={46} height={46} style={{ objectFit: "contain", borderRadius: 10 }} />
             </div>
             <div>
-              <p className="brand-from">Proposal Prepared By</p>
               <h1 className="brand-name">India&apos;s No 1 Remote Gate Motor</h1>
             </div>
           </div>
