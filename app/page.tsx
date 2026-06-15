@@ -172,7 +172,7 @@ export default function Home() {
               { icon: "📊", title: "Inventory Management", desc: "Stock tracking with in-stock / out-of-stock availability status per product" },
               { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and address management" },
               { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, and net banking" },
-              { icon: "📋", title: "Order Management", desc: "Order lifecycle management — placed, confirmed, shipped, and delivered" },
+              { icon: "📋", title: "Order Management", desc: "Order lifecycle management — placed, confirmed, shipped, and delivered — with confirmation email sent to customer on successful payment" },
               { icon: "🚚", title: "Order Status & Tracking", desc: "Admin updates order status with AWB number; customer can track shipment via courier link" },
               { icon: "📈", title: "Reports & Analytics", desc: "Sales reports, revenue trends, and top-performing products for admin" },
               { icon: "🏢", title: "Dealer Registration", desc: "GST-based onboarding with document upload and admin approval workflow" },
