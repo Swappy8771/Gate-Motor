@@ -393,7 +393,6 @@ export default function Home() {
           <div className="cta-contacts">
             <div className="contact-item">
               <span>📍</span>
-              <span>Chakan Talegaon Road, Mahalunge Ingale, Chakan MIDC, Pune 410501</span>
             </div>
           </div>
           <p className="cta-note">This proposal is confidential and prepared exclusively for the client.</p>
@@ -404,7 +403,6 @@ export default function Home() {
       {/* ── FOOTER ── */}
       <footer className="proposal-footer">
         <p>© 2026 India&apos;s No 1 Remote Gate Motor · All rights reserved</p>
-        <p>Chakan MIDC, Pune 410501 · Proposal valid for 15 days</p>
         <p>
           Prepared by{" "}
           <a href="https://qodeways.com/" target="_blank" rel="noopener noreferrer" className="footer-link">
