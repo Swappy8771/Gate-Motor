@@ -38,7 +38,7 @@ export default function Home() {
             <span className="hero-subtitle"> B2C-First · B2B-Ready</span>
           </h2>
           <p className="hero-desc">
-            A comprehensive digital commerce solution where retail customers can browse, compare, and
+            A comprehensive digital commerce solution where retail customers can browse and
             purchase gate automation products online — with extended B2B support for verified dealers,
             and full admin control over products, inventory, and orders.
           </p>
@@ -74,15 +74,15 @@ export default function Home() {
               We propose to design, develop, and deploy a fully responsive e-commerce platform for
               <strong> India&apos;s No 1 Remote Gate Motor</strong>, tailored for gate automation product sales.
               The platform will primarily serve <strong>retail customers (B2C)</strong> — enabling them to
-              browse, compare, and purchase products online with ease — while also supporting{" "}
+              browse and purchase products online with ease — while also supporting{" "}
               <strong>verified business dealers (B2B)</strong> under the same unified system, with a powerful
               admin dashboard for complete business management.
             </p>
             <p style={{ marginTop: "1rem" }}>
               Products covered: <strong>Sliding Gate Automation, Swing Gate Automation, Boom Barrier
               Automation, Wireless Remote,</strong> and <strong>Mobile Operated Device</strong>. The platform
-              will feature a seamless shopping experience with Razorpay payment integration, real-time order
-              tracking, and mobile-first design — along with dual pricing and GST-based dealer onboarding for B2B support.
+              will feature a seamless shopping experience with Razorpay payment integration, order status tracking
+              with courier tracking link, and mobile-first design — along with dual pricing and GST-based dealer onboarding for B2B support.
             </p>
           </div>
         </section>
@@ -97,7 +97,7 @@ export default function Home() {
               <h4>Current Challenges</h4>
               <ul className="bullet-list">
                 <li>No online storefront for retail customers to browse &amp; buy</li>
-                <li>No real-time inventory visibility for customers</li>
+                <li>No online visibility of product availability for customers</li>
                 <li>Fragmented order management across channels</li>
                 <li>Limited reach beyond physical distribution network</li>
                 <li>Manual dealer verification and pricing negotiation</li>
@@ -108,7 +108,7 @@ export default function Home() {
               <h4>Our Solution</h4>
               <ul className="bullet-list">
                 <li>24/7 online storefront with mobile-first design</li>
-                <li>Real-time product catalog with live inventory status</li>
+                <li>Up-to-date product catalog with live stock availability</li>
                 <li>Centralized order management &amp; tracking dashboard</li>
                 <li>Single platform serving B2C &amp; B2B with role-based access</li>
                 <li>Automated GST verification &amp; admin approval for dealers</li>
@@ -129,7 +129,7 @@ export default function Home() {
               <ul className="role-list">
                 <li>Browse product catalog</li>
                 <li>Purchase at retail price</li>
-                <li>Track orders in real-time</li>
+                <li>Track order status &amp; courier shipment</li>
                 <li>Manage profile &amp; addresses</li>
                 <li>View purchase history</li>
               </ul>
@@ -174,7 +174,7 @@ export default function Home() {
               { icon: "📱", title: "Mobile Operated Device", desc: "App-controlled gate device listings with setup videos and mobile pairing guides" },
               { icon: "🔐", title: "Customer Auth", desc: "Secure registration, login, OTP/email verification, and profile management" },
               { icon: "🗂️", title: "Category Management", desc: "Category structure for Gate Automation, Barriers, Remotes, and Accessories" },
-              { icon: "📊", title: "Inventory Management", desc: "Real-time stock tracking with low-stock alerts and availability status" },
+              { icon: "📊", title: "Inventory Management", desc: "Stock tracking with in-stock / out-of-stock availability status per product" },
               { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and saved items" },
               { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, net banking, and EMI options" },
               { icon: "📋", title: "Order Management", desc: "Complete order lifecycle — placed, confirmed, shipped, delivered, returned" },
