@@ -109,9 +109,8 @@ export default function Home() {
               <ul className="bullet-list">
                 <li>24/7 online storefront with mobile-first design</li>
                 <li>Up-to-date product catalog with live stock availability</li>
-                <li>Centralized order management &amp; tracking dashboard</li>
+                <li>Centralized order management dashboard</li>
                 <li>Single platform serving B2C &amp; B2B with role-based access</li>
-                <li>Automated GST verification &amp; admin approval for dealers</li>
               </ul>
             </div>
           </div>
@@ -139,11 +138,11 @@ export default function Home() {
               <h4>Dealer</h4>
               <p className="role-tag">B2B · Wholesale</p>
               <ul className="role-list">
-                <li>Register with GST number</li>
+                <li>Register with GST number &amp; documents</li>
                 <li>Admin approval required</li>
-                <li>Access dealer-specific pricing</li>
-                <li>Bulk quantity purchasing</li>
-                <li>Dedicated dealer dashboard</li>
+                <li>Browse &amp; order at dealer-specific pricing</li>
+                <li>View order history &amp; status</li>
+                <li>Account approval status page</li>
               </ul>
             </div>
             <div className="role-card admin-role">
