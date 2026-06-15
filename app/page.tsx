@@ -167,20 +167,18 @@ export default function Home() {
           <h3 className="section-title">Key Features</h3>
           <div className="features-grid">
             {[
-              { icon: "🚪", title: "Sliding Gate Automation", desc: "Dedicated product pages with motor specs, installation guides, and compatible remote models" },
-              { icon: "🔄", title: "Swing Gate Automation", desc: "Full catalog listing for single & double leaf swing gate motors with technical datasheets" },
-              { icon: "🚧", title: "Boom Barrier Automation", desc: "Boom barrier product range for commercial & industrial use with full specs and installation support" },
-              { icon: "📡", title: "Wireless Remote", desc: "Frequency-based remote listings with compatibility filter and pair-device documentation" },
-              { icon: "📱", title: "Mobile Operated Device", desc: "App-controlled gate device listings with setup videos and mobile pairing guides" },
-              { icon: "🔐", title: "Customer Auth", desc: "Secure registration, login, OTP/email verification, and profile management" },
-              { icon: "🗂️", title: "Category Management", desc: "Category structure for Gate Automation, Barriers, Remotes, and Accessories" },
+              { icon: "🗂️", title: "Product Catalog", desc: "Structured catalog with categories, product pages, images, specifications, and stock availability" },
+              { icon: "🔐", title: "Customer Auth", desc: "Secure registration, login, email verification, and profile management" },
+              { icon: "📦", title: "Category Management", desc: "Admin-managed category structure for Gate Automation, Barriers, Remotes, and Accessories" },
               { icon: "📊", title: "Inventory Management", desc: "Stock tracking with in-stock / out-of-stock availability status per product" },
-              { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and saved items" },
-              { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, net banking, and EMI options" },
-              { icon: "📋", title: "Order Management", desc: "Complete order lifecycle — placed, confirmed, shipped, delivered, returned" },
-              { icon: "📈", title: "Reports & Analytics", desc: "Sales reports, revenue trends, top products, and dealer performance" },
+              { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and address management" },
+              { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, and net banking" },
+              { icon: "📋", title: "Order Management", desc: "Order lifecycle management — placed, confirmed, shipped, and delivered" },
+              { icon: "🚚", title: "Order Status & Tracking", desc: "Admin updates order status with AWB number; customer can track shipment via courier link" },
+              { icon: "📈", title: "Reports & Analytics", desc: "Sales reports, revenue trends, and top-performing products for admin" },
               { icon: "🏢", title: "Dealer Registration", desc: "GST-based onboarding with document upload and admin approval workflow" },
-              { icon: "🏷️", title: "Dual Pricing System", desc: "Separate retail and dealer-specific discounted pricing per product" },
+              { icon: "🏷️", title: "Dual Pricing System", desc: "Separate retail and dealer-specific pricing per product, managed by admin" },
+              { icon: "🛡️", title: "Role-based Access", desc: "Separate access levels for customers, dealers, and admin with secure JWT authentication" },
             ].map((f) => (
               <div className="feature-card" key={f.title}>
                 <span className="feature-icon">{f.icon}</span>
