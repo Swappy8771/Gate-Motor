@@ -256,7 +256,7 @@ export default function Home() {
                   "Razorpay payment integration (UPI, cards, netbanking)",
                   "Order creation & confirmation",
                   "Order status management & tracking",
-                  "Email/SMS notifications on order events",
+                  "Order confirmation email on successful payment",
                 ],
               },
               {
@@ -390,11 +390,6 @@ export default function Home() {
         <section className="cta-section">
           <h3>Ready to Get Started?</h3>
           <p>Let&apos;s build your e-commerce platform and take your business online.</p>
-          <div className="cta-contacts">
-            <div className="contact-item">
-              <span>📍</span>
-            </div>
-          </div>
           <p className="cta-note">This proposal is confidential and prepared exclusively for the client.</p>
         </section>
 
