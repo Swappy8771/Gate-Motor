@@ -34,14 +34,13 @@ export default function Home() {
         <div className="hero-inner">
           <span className="hero-tag">Official Project Proposal</span>
           <h2 className="hero-title">
-            B2C &amp; B2B E-Commerce Platform
-            <span className="hero-subtitle"> for Gate Automation Products</span>
+            E-Commerce Platform for Gate Automation
+            <span className="hero-subtitle"> B2C-First · B2B-Ready</span>
           </h2>
           <p className="hero-desc">
-            A comprehensive digital commerce solution enabling retail customers and registered dealers
-            to seamlessly purchase Sliding Gate Automation, Swing Gate Automation, Boom Barriers,
-            Wireless Remotes &amp; Mobile Operated Devices — with full admin control over products,
-            inventory, orders, and dealer approvals.
+            A comprehensive digital commerce solution where retail customers can browse, compare, and
+            purchase gate automation products online — with extended B2B support for verified dealers,
+            and full admin control over products, inventory, and orders.
           </p>
           <div className="hero-stats">
             <div className="stat">
@@ -74,15 +73,16 @@ export default function Home() {
             <p>
               We propose to design, develop, and deploy a fully responsive e-commerce platform for
               <strong> India&apos;s No 1 Remote Gate Motor</strong>, tailored for gate automation product sales.
-              The platform will serve two distinct customer segments — <strong>retail customers (B2C)</strong> and{" "}
-              <strong>verified business dealers (B2B)</strong> — under one unified system, with a powerful
+              The platform will primarily serve <strong>retail customers (B2C)</strong> — enabling them to
+              browse, compare, and purchase products online with ease — while also supporting{" "}
+              <strong>verified business dealers (B2B)</strong> under the same unified system, with a powerful
               admin dashboard for complete business management.
             </p>
             <p style={{ marginTop: "1rem" }}>
               Products covered: <strong>Sliding Gate Automation, Swing Gate Automation, Boom Barrier
               Automation, Wireless Remote,</strong> and <strong>Mobile Operated Device</strong>. The platform
-              will feature dual pricing, GST-based dealer verification with admin approval, Razorpay payment
-              integration, and real-time order tracking — delivering a seamless purchase experience across all devices.
+              will feature a seamless shopping experience with Razorpay payment integration, real-time order
+              tracking, and mobile-first design — along with dual pricing and GST-based dealer onboarding for B2B support.
             </p>
           </div>
         </section>
@@ -96,22 +96,22 @@ export default function Home() {
               <div className="card-icon problem-icon">⚠️</div>
               <h4>Current Challenges</h4>
               <ul className="bullet-list">
-                <li>No unified online sales channel for retail &amp; dealer customers</li>
-                <li>Manual dealer verification and pricing negotiation</li>
+                <li>No online storefront for retail customers to browse &amp; buy</li>
                 <li>No real-time inventory visibility for customers</li>
                 <li>Fragmented order management across channels</li>
                 <li>Limited reach beyond physical distribution network</li>
+                <li>Manual dealer verification and pricing negotiation</li>
               </ul>
             </div>
             <div className="card solution-card">
               <div className="card-icon solution-icon">✅</div>
               <h4>Our Solution</h4>
               <ul className="bullet-list">
-                <li>Single platform serving B2C &amp; B2B with role-based access</li>
-                <li>Automated GST verification &amp; admin approval for dealers</li>
+                <li>24/7 online storefront with mobile-first design</li>
                 <li>Real-time product catalog with live inventory status</li>
                 <li>Centralized order management &amp; tracking dashboard</li>
-                <li>24/7 online storefront with mobile-first design</li>
+                <li>Single platform serving B2C &amp; B2B with role-based access</li>
+                <li>Automated GST verification &amp; admin approval for dealers</li>
               </ul>
             </div>
           </div>
@@ -152,9 +152,9 @@ export default function Home() {
               <p className="role-tag">Platform · Management</p>
               <ul className="role-list">
                 <li>Manage products &amp; categories</li>
-                <li>Approve/reject dealers</li>
-                <li>Set dealer discount pricing</li>
                 <li>Manage inventory &amp; orders</li>
+                <li>Manage banners &amp; promotions</li>
+                <li>Approve dealers &amp; set pricing</li>
                 <li>View reports &amp; analytics</li>
               </ul>
             </div>
@@ -169,18 +169,18 @@ export default function Home() {
             {[
               { icon: "🚪", title: "Sliding Gate Automation", desc: "Dedicated product pages with motor specs, installation guides, and compatible remote models" },
               { icon: "🔄", title: "Swing Gate Automation", desc: "Full catalog listing for single & double leaf swing gate motors with technical datasheets" },
-              { icon: "🚧", title: "Boom Barrier Automation", desc: "Boom barrier product range for commercial & industrial use with dealer bulk pricing" },
+              { icon: "🚧", title: "Boom Barrier Automation", desc: "Boom barrier product range for commercial & industrial use with full specs and installation support" },
               { icon: "📡", title: "Wireless Remote", desc: "Frequency-based remote listings with compatibility filter and pair-device documentation" },
               { icon: "📱", title: "Mobile Operated Device", desc: "App-controlled gate device listings with setup videos and mobile pairing guides" },
               { icon: "🔐", title: "Customer Auth", desc: "Secure registration, login, OTP/email verification, and profile management" },
-              { icon: "🏢", title: "Dealer Registration", desc: "GST-based onboarding with document upload and admin approval workflow" },
-              { icon: "🏷️", title: "Dual Pricing System", desc: "Separate retail and dealer-specific discounted pricing per product" },
               { icon: "🗂️", title: "Category Management", desc: "Category structure for Gate Automation, Barriers, Remotes, and Accessories" },
               { icon: "📊", title: "Inventory Management", desc: "Real-time stock tracking with low-stock alerts and availability status" },
               { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and saved items" },
               { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, net banking, and EMI options" },
               { icon: "📋", title: "Order Management", desc: "Complete order lifecycle — placed, confirmed, shipped, delivered, returned" },
               { icon: "📈", title: "Reports & Analytics", desc: "Sales reports, revenue trends, top products, and dealer performance" },
+              { icon: "🏢", title: "Dealer Registration", desc: "GST-based onboarding with document upload and admin approval workflow" },
+              { icon: "🏷️", title: "Dual Pricing System", desc: "Separate retail and dealer-specific discounted pricing per product" },
             ].map((f) => (
               <div className="feature-card" key={f.title}>
                 <span className="feature-icon">{f.icon}</span>
