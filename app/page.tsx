@@ -52,7 +52,7 @@ export default function Home() {
               <span className="stat-label">Core Features</span>
             </div>
             <div className="stat">
-              <span className="stat-num">3–4</span>
+              <span className="stat-num">3.5</span>
               <span className="stat-label">Week Delivery</span>
             </div>
             <div className="stat">
@@ -222,54 +222,51 @@ export default function Home() {
             {[
               {
                 week: "Week 1",
-                title: "Foundation & Authentication",
+                title: "Foundation, Authentication & Catalog",
                 color: "week1",
                 tasks: [
-                  "Project setup — Next.js frontend + Node.js backend",
-                  "Database schema design",
-                  "Customer registration & login (JWT auth)",
-                  "Dealer registration with GST verification flow",
-                  "Admin approval workflow for dealers",
-                  "Role-based access control (Customer / Dealer / Admin)",
+                  "Project setup — Next.js frontend + Node.js backend + PostgreSQL",
+                  "Database schema design & migrations",
+                  "Customer & dealer registration, login (JWT) & role-based access",
+                  "Dealer GST onboarding with admin approval workflow",
+                  "Product & category management with images & specifications",
+                  "Dual pricing (retail + dealer) & public catalog with search/filter",
                 ],
               },
               {
                 week: "Week 2",
-                title: "Product & Catalog System",
+                title: "Cart, Checkout, Payments & Orders",
                 color: "week2",
                 tasks: [
-                  "Category management (CRUD + hierarchy)",
-                  "Product listing with images & specifications",
-                  "Dual pricing — retail price & dealer discount price",
-                  "Inventory management & stock tracking",
-                  "Product search, filter, and sorting",
-                  "Admin product management dashboard",
+                  "Inventory management with live stock availability",
+                  "Shopping cart & checkout with address management",
+                  "Razorpay payment integration (UPI, cards, net banking)",
+                  "Secure server-side payment verification & webhook",
+                  "Order creation, lifecycle & cancellation",
+                  "Order status & courier tracking (AWB + tracking link)",
                 ],
               },
               {
                 week: "Week 3",
-                title: "Cart, Checkout & Payments",
+                title: "Admin, Reports & Notifications",
                 color: "week3",
                 tasks: [
-                  "Shopping cart with persistent state",
-                  "Checkout flow with address management",
-                  "Razorpay payment integration (UPI, cards, netbanking)",
-                  "Order creation & confirmation",
-                  "Order status management & tracking",
-                  "Order confirmation email on successful payment",
+                  "Admin dashboard — orders, dealers, inventory & banners",
+                  "Reports & analytics (sales, revenue, top products)",
+                  "Order confirmation & dealer approval emails",
+                  "Static / legal pages (About, Contact, Privacy, Terms)",
+                  "Technical SEO setup — metadata, sitemap & robots",
                 ],
               },
               {
-                week: "Week 4",
-                title: "Polish, Analytics & Launch",
+                week: "Final ½",
+                title: "QA, Polish & Go-Live",
                 color: "week4",
                 tasks: [
-                  "Homepage banner & promotions management",
-                  "Reports & analytics dashboard (sales, revenue, top products)",
-                  "Mobile responsiveness audit & fixes",
-                  "Performance optimization & security hardening",
-                  "UAT testing & bug fixes",
-                  "Deployment, DNS setup & go-live support",
+                  "Mobile-responsive polish across all portals",
+                  "Security hardening & performance pass",
+                  "UAT, bug fixes & quality pass",
+                  "Production deployment, domain/SSL & go-live support",
                 ],
               },
             ].map((phase) => (
@@ -298,7 +295,7 @@ export default function Home() {
             {[
               { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, category browsing, and SEO-optimized pages" },
               { icon: "👥", title: "Customer Portal", desc: "Full-featured portal for registration, browsing, cart, checkout, orders, and profile management" },
-              { icon: "🏭", title: "Dealer Portal", desc: "Dedicated portal with GST onboarding, discounted pricing view, bulk orders, and dealer dashboard" },
+              { icon: "🏭", title: "Dealer Portal", desc: "Dedicated portal with GST onboarding, dealer pricing, ordering at dealer rates, and dealer dashboard" },
               { icon: "⚙️", title: "Admin Dashboard", desc: "Comprehensive management panel for products, categories, inventory, users, dealers, and orders" },
               { icon: "🚀", title: "Deployment & Go-Live", desc: "Production deployment, SSL setup, domain configuration, and post-launch support handover" },
             ].map((d) => (
@@ -320,27 +317,61 @@ export default function Home() {
           <div className="card investment-card">
             <div className="investment-header">
               <div>
-                <p className="investment-label">Total Project Investment</p>
-                <p className="investment-amount">₹ — To Be Discussed</p>
-                <p className="investment-note">Inclusive of development, testing, and deployment</p>
+                <p className="investment-label">Total Project Estimation</p>
+                <p className="price-original">₹45,000</p>
+                <p className="investment-amount">₹36,999</p>
+                <p className="investment-note">You save ₹8,001 · solo developer · 3.5-week end-to-end delivery · <em>GST extra as applicable</em></p>
               </div>
-              <div className="investment-badge">Fixed Price</div>
+              <div className="investment-badge">17.78%<span className="off-label">OFF</span></div>
             </div>
+
+            <p className="estimate-caption">Cost &amp; Time Estimation</p>
+            <div className="estimate-table">
+              <div className="estimate-header">
+                <span>Phase</span>
+                <span>Key deliverables</span>
+                <span>Timeline</span>
+                <span>Cost</span>
+              </div>
+              {[
+                { phase: "1 · Foundation, Auth & Catalog", deliv: "Setup, database, authentication, dealer onboarding, catalog & dual pricing", time: "Week 1", cost: "₹16,000" },
+                { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay, order lifecycle & tracking", time: "Week 2", cost: "₹11,000" },
+                { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, banners, reports, emails & legal pages", time: "Week 3", cost: "₹8,000" },
+                { phase: "4 · QA, Polish & Go-Live", deliv: "Responsive,Technical SEO, security, UAT, deployment & handover", time: "Final ½ week", cost: "₹10,000" },
+              ].map((r) => (
+                <div className="estimate-row" key={r.phase}>
+                  <span className="e-phase">{r.phase}</span>
+                  <span className="e-deliv">{r.deliv}</span>
+                  <span className="e-time">{r.time}</span>
+                  <span className="e-cost">{r.cost}</span>
+                </div>
+              ))}
+              <div className="estimate-total">
+                <span className="e-phase">Total Estimation</span>
+                <span className="e-deliv" />
+                <span className="e-time">3.5 weeks</span>
+                <span className="e-cost">₹45,000</span>
+              </div>
+            </div>
+
+            <p className="estimate-caption">Payment Schedule · on offer price ₹36,999</p>
             <div className="milestone-table">
               <div className="milestone-header">
                 <span>Milestone</span>
-                <span>Payment</span>
+                <span>Trigger</span>
                 <span>%</span>
+                <span>Amount</span>
               </div>
               {[
-                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "30%" },
-                { milestone: "Mid Delivery", trigger: "After Week 2 completion", pct: "40%" },
-                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "30%" },
+                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "20%", amt: "₹7,400" },
+                { milestone: "Mid Delivery", trigger: "After Week 2 — commerce core complete", pct: "45%", amt: "₹16,650" },
+                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "35%", amt: "₹12,949" },
               ].map((m) => (
                 <div className="milestone-row" key={m.milestone}>
                   <span className="m-name">{m.milestone}</span>
                   <span className="m-trigger">{m.trigger}</span>
                   <span className="m-pct">{m.pct}</span>
+                  <span className="m-amt">{m.amt}</span>
                 </div>
               ))}
             </div>
@@ -353,7 +384,7 @@ export default function Home() {
           <h3 className="section-title">Why Choose Us</h3>
           <div className="why-grid">
             {[
-              { icon: "⚡", title: "Fast Delivery", desc: "3–4 week timeline with weekly milestone demos to keep you informed" },
+              { icon: "⚡", title: "Fast Delivery", desc: "3.5-week end-to-end timeline with weekly milestone demos to keep you informed" },
               { icon: "🔒", title: "Secure by Design", desc: "JWT auth, encrypted payments, role-based access, and SSL on all routes" },
               { icon: "📱", title: "Mobile First", desc: "Every screen designed and tested for mobile, tablet, and desktop" },
               { icon: "🔧", title: "Scalable Architecture", desc: "Built to grow — add new features, dealers, or products without rebuilding" },
@@ -689,27 +720,51 @@ export default function Home() {
         .investment-label  { font-size: 0.9rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
         .investment-amount { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 900; color: #0f172a; }
         .investment-note   { font-size: 0.9rem; font-weight: 500; color: #94a3b8; margin-top: 0.2rem; }
+        .price-original { font-size: 1.2rem; font-weight: 700; color: #94a3b8; text-decoration: line-through; margin-bottom: 0.1rem; }
         .investment-badge {
-          background: linear-gradient(135deg, #3b82f6, #06b6d4);
-          color: white; padding: 0.5rem 1.25rem;
-          border-radius: 20px; font-size: 0.95rem; font-weight: 800; white-space: nowrap;
+          background: linear-gradient(135deg, #16a34a, #22c55e);
+          color: white; padding: 0.7rem 1.4rem;
+          border-radius: 16px; font-size: 1.5rem; font-weight: 900; white-space: nowrap;
+          display: flex; flex-direction: column; align-items: center; line-height: 1;
+          box-shadow: 0 6px 18px rgba(22,163,74,0.28);
         }
+        .off-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.18em; margin-top: 0.2rem; }
+        .estimate-caption { font-size: 0.9rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.6rem; }
+        .estimate-table { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 1.5rem; }
+        .estimate-header, .estimate-row, .estimate-total {
+          display: grid; grid-template-columns: 1.5fr 2.4fr 1fr 1fr; gap: 0.5rem;
+          padding: 0.7rem 1rem; align-items: center;
+        }
+        .estimate-header {
+          background: #f8fafc; font-size: 0.78rem; font-weight: 800; color: #64748b;
+          text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid #e2e8f0;
+        }
+        .estimate-row { border-bottom: 1px solid #f1f5f9; }
+        .estimate-total { background: #f8fafc; border-top: 2px solid #e2e8f0; }
+        .e-phase { font-weight: 700; color: #1e293b; font-size: 0.9rem; }
+        .e-deliv { font-size: 0.85rem; color: #64748b; font-weight: 500; }
+        .e-time  { font-size: 0.88rem; color: #475569; font-weight: 600; }
+        .e-cost  { font-weight: 800; color: #3b82f6; font-size: 0.95rem; text-align: right; }
+        .estimate-total .e-phase, .estimate-total .e-time { font-weight: 800; }
+        .estimate-total .e-cost { color: #0f172a; }
+
         .milestone-table { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
         .milestone-header {
-          display: grid; grid-template-columns: 1fr 2fr 70px;
+          display: grid; grid-template-columns: 1.2fr 1.8fr 56px 96px; gap: 0.5rem;
           background: #f8fafc; padding: 0.75rem 1rem;
-          font-size: 0.85rem; font-weight: 800; color: #64748b;
+          font-size: 0.82rem; font-weight: 800; color: #64748b;
           text-transform: uppercase; letter-spacing: 0.05em;
           border-bottom: 1px solid #e2e8f0;
         }
         .milestone-row {
-          display: grid; grid-template-columns: 1fr 2fr 70px;
+          display: grid; grid-template-columns: 1.2fr 1.8fr 56px 96px; gap: 0.5rem;
           padding: 0.9rem 1rem; border-bottom: 1px solid #f1f5f9; align-items: center;
         }
         .milestone-row:last-child { border: none; }
-        .m-name    { font-weight: 700; font-size: 1rem; }
-        .m-trigger { font-size: 0.92rem; font-weight: 500; color: #64748b; }
-        .m-pct     { font-weight: 800; color: #3b82f6; font-size: 1.1rem; }
+        .m-name    { font-weight: 700; font-size: 0.95rem; }
+        .m-trigger { font-size: 0.9rem; font-weight: 500; color: #64748b; }
+        .m-pct     { font-weight: 800; color: #3b82f6; font-size: 1.05rem; }
+        .m-amt     { font-weight: 800; color: #0f172a; font-size: 0.95rem; text-align: right; }
 
         /* ── WHY US ── */
         .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
@@ -776,9 +831,11 @@ export default function Home() {
           .timeline-marker  { min-width: 56px; padding-right: 1.1rem; }
           .timeline-item    { gap: 1.25rem; }
           .timeline-content ul { grid-template-columns: 1fr; }
-          .milestone-header { grid-template-columns: 1fr 70px; }
-          .milestone-row    { grid-template-columns: 1fr 70px; }
+          .milestone-header { grid-template-columns: 1.4fr 48px 92px; }
+          .milestone-row    { grid-template-columns: 1.4fr 48px 92px; }
           .m-trigger        { display: none; }
+          .estimate-header, .estimate-row, .estimate-total { grid-template-columns: 1.6fr 1fr 1fr; }
+          .e-deliv { display: none; }
           .tech-group { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
           .tech-group-title { min-width: unset; }
           .meta-client { font-size: 1rem; }
