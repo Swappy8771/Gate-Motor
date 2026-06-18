@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Project Proposal — E-Commerce Platform | India's No 1 Remote Gate Motor",
@@ -311,7 +312,7 @@ export default function Home() {
         </section>
 
         {/* ── INVESTMENT ── */}
-        <section className="section">
+        <section className="section" id="cost-estimation">
           <div className="section-label">08</div>
           <h3 className="section-title">Investment</h3>
           <div className="card investment-card">
@@ -425,6 +426,18 @@ export default function Home() {
         </section>
 
       </div>
+
+      <Script id="open-cost-estimation" strategy="afterInteractive">
+        {`
+          const target = document.getElementById("cost-estimation");
+          if (target) {
+            if (window.location.hash !== "#cost-estimation") {
+              window.history.replaceState(null, "", "#cost-estimation");
+            }
+            target.scrollIntoView({ block: "start" });
+          }
+        `}
+      </Script>
 
       {/* ── FOOTER ── */}
       <footer className="proposal-footer">
