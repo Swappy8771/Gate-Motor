@@ -294,7 +294,7 @@ export default function Home() {
           <h3 className="section-title">Deliverables</h3>
           <div className="deliverables-grid">
             {[
-              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, category browsing, and SEO-optimized pages" },
+              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, category browsing, and Technical SEO-optimized pages" },
               { icon: "👥", title: "Customer Portal", desc: "Full-featured portal for registration, browsing, cart, checkout, orders, and profile management" },
               { icon: "🏭", title: "Dealer Portal", desc: "Dedicated portal with GST onboarding, dealer pricing, ordering at dealer rates, and dealer dashboard" },
               { icon: "⚙️", title: "Admin Dashboard", desc: "Comprehensive management panel for products, categories, inventory, users, dealers, and orders" },
@@ -320,10 +320,10 @@ export default function Home() {
               <div>
                 <p className="investment-label">Total Project Estimation</p>
                 <p className="price-original">₹45,000</p>
-                <p className="investment-amount">₹36,999</p>
-                <p className="investment-note">You save ₹8,001 · solo developer · 3.5-week end-to-end delivery · <em>GST extra as applicable</em></p>
+                <p className="investment-amount">₹31,999</p>
+                <p className="investment-note">You save ₹13,001 · solo developer · 3.5-week end-to-end delivery · <em>GST extra as applicable</em></p>
               </div>
-              <div className="investment-badge">17.78%<span className="off-label">OFF</span></div>
+              <div className="investment-badge">28.89%<span className="off-label">OFF</span></div>
             </div>
 
             <p className="estimate-caption">Cost &amp; Time Estimation</p>
@@ -338,7 +338,7 @@ export default function Home() {
                 { phase: "1 · Foundation, Auth & Catalog", deliv: "Setup, database, authentication, dealer onboarding, catalog & dual pricing", time: "Week 1", cost: "₹16,000" },
                 { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay, order lifecycle & tracking", time: "Week 2", cost: "₹11,000" },
                 { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, banners, reports, emails & legal pages", time: "Week 3", cost: "₹8,000" },
-                { phase: "4 · QA, Polish & Go-Live", deliv: "Responsive,Technical SEO, security, UAT, deployment & handover", time: "Final ½ week", cost: "₹10,000" },
+                { phase: "4 · QA, Polish & Go-Live", deliv: "Responsive, Technical SEO, security, UAT, deployment & handover", time: "Final ½ week", cost: "₹10,000" },
               ].map((r) => (
                 <div className="estimate-row" key={r.phase}>
                   <span className="e-phase">{r.phase}</span>
@@ -351,11 +351,11 @@ export default function Home() {
                 <span className="e-phase">Total Estimation</span>
                 <span className="e-deliv" />
                 <span className="e-time">3.5 weeks</span>
-                <span className="e-cost">₹45,000</span>
+                <span className="e-cost"><span className="e-strike">₹45,000</span>₹31,999</span>
               </div>
             </div>
 
-            <p className="estimate-caption">Payment Schedule · on offer price ₹36,999</p>
+            <p className="estimate-caption">Payment Schedule · on offer price ₹31,999</p>
             <div className="milestone-table">
               <div className="milestone-header">
                 <span>Milestone</span>
@@ -364,9 +364,9 @@ export default function Home() {
                 <span>Amount</span>
               </div>
               {[
-                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "20%", amt: "₹7,400" },
-                { milestone: "Mid Delivery", trigger: "After Week 2 — commerce core complete", pct: "45%", amt: "₹16,650" },
-                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "35%", amt: "₹12,949" },
+                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "20%", amt: "₹6,400" },
+                { milestone: "Mid Delivery", trigger: "After Week 2 — commerce core complete", pct: "45%", amt: "₹14,400" },
+                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "35%", amt: "₹11,199" },
               ].map((m) => (
                 <div className="milestone-row" key={m.milestone}>
                   <span className="m-name">{m.milestone}</span>
@@ -759,7 +759,8 @@ export default function Home() {
         .e-time  { font-size: 0.88rem; color: #475569; font-weight: 600; }
         .e-cost  { font-weight: 800; color: #3b82f6; font-size: 0.95rem; text-align: right; }
         .estimate-total .e-phase, .estimate-total .e-time { font-weight: 800; }
-        .estimate-total .e-cost { color: #0f172a; }
+        .estimate-total .e-cost { color: #16a34a; }
+        .e-strike { text-decoration: line-through; color: #94a3b8; font-weight: 700; font-size: 0.82em; margin-right: 0.45rem; }
 
         .milestone-table { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
         .milestone-header {

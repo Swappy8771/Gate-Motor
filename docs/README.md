@@ -1,7 +1,7 @@
 # Project Knowledge Base — India's No 1 Remote Gate Motor
 ## E-Commerce Platform for Gate Automation — **B2C-First · B2B-Ready**
 
-> **Status:** Final **v1.2** — pricing finalized (₹45,000 → offer ₹36,999); post-audit corrections applied
+> **Status:** Final **v1.3** — pricing: ₹45,000 → offer **₹31,999** (28.89% off); post-audit corrections applied
 > **Vendor:** Qodeways Technologies Pvt Ltd · https://qodeways.com/
 > **Client:** India's No 1 Remote Gate Motor · Chakan MIDC, Pune 410501
 > **Stack:** Next.js 14 + Node.js/Express + PostgreSQL/Prisma + Razorpay

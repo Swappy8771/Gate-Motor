@@ -1,6 +1,6 @@
 # 12 — Cost & Effort Estimate (Internal)
 
-> **Status:** Final v1.2 · Quoted as a **flat competitive project price** — estimation **₹45,000**, offer **₹36,999** (17.78% off · save ₹8,001). Reflected in the proposal's Investment section.
+> **Status:** Final v1.3 · Quoted as a **flat competitive project price** — estimation **₹45,000**, offer **₹31,999** (28.89% off · save ₹13,001). Reflected in the proposal's Investment section.
 > **Internal note:** the price is a market/flat quote — **not** effort × day-rate. The developer-day breakdown below is the **scope/effort reference only** (what's included) and stays internal; do not expose day-counts or imply an hourly rate to the client.
 
 ---
@@ -45,8 +45,8 @@
 |---|---|
 | Effort / scope reference | ~41 developer-days *(internal only)* |
 | **Estimation (list price)** | **₹45,000** |
-| Offer discount | 17.78% (save ₹8,001) |
-| **Offer price (payable)** | **₹36,999** |
+| Offer discount | 28.89% (save ₹13,001) |
+| **Offer price (payable)** | **₹31,999** |
 | GST | extra as applicable |
 
 ### Estimation by phase (client-facing · sums to ₹45,000)
@@ -58,12 +58,12 @@
 | QA, Polish & Go-Live | Final ½ | ₹10,000 |
 | **Total** | **3.5 weeks** | **₹45,000** |
 
-### Milestone split (30 / 40 / 30) — on the **offer price ₹36,999**
+### Milestone split (20 / 45 / 35) — on the **offer price ₹31,999**
 | Milestone | Trigger | % | Amount |
 |---|---|---:|---:|
-| Kickoff | On agreement signing | 30% | ₹11,100 |
-| Mid delivery | After Week 2 — commerce core complete | 40% | ₹14,799 |
-| Final delivery | Post go-live & handover | 30% | ₹11,100 |
+| Kickoff | On agreement signing | 20% | ₹6,400 |
+| Mid delivery | After Week 2 — commerce core complete | 45% | ₹14,400 |
+| Final delivery | Post go-live & handover | 35% | ₹11,199 |
 
 ---
 
@@ -85,10 +85,10 @@ The effort (~41 comfortable-pace days) is compressed into a **3.5-week solo crun
 ## Recompute Formula (if the price changes)
 Let `E` = estimation (list price) and `B` = offer price (payable).
 ```
-discount %    = (E − B) ÷ E × 100        // e.g. (45000 − 36999)/45000 = 17.78%
-savings       = E − B                    // ₹8,001
-Kickoff (30%) = B × 0.30                  // ₹11,100
-Mid     (40%) = B × 0.40                  // ₹14,799
-Final   (30%) = B × 0.30                  // ₹11,100
+discount %    = (E − B) ÷ E × 100        // e.g. (45000 − 31999)/45000 = 28.89%
+savings       = E − B                    // ₹13,001
+Kickoff (20%) = B × 0.20                  // ₹6,400
+Mid     (45%) = B × 0.45                  // ₹14,400
+Final   (35%) = B × 0.35                  // ₹11,199
 ```
 Update: this doc, the proposal's struck price (`E`), offer price (`B`), discount %, the phase table, and milestone amounts — then log it in [CHANGELOG](./CHANGELOG.md).

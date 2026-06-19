@@ -4,6 +4,15 @@ All notable changes to this knowledge base are recorded here. This `docs/` set i
 
 ---
 
+## v1.3 — June 2026 — Offer revised
+
+- Offer price **₹36,999 → ₹31,999** (estimation stays ₹45,000) → discount **28.89%**, save **₹13,001**.
+- Milestone split changed **30/40/30 → 20/45/35** on ₹31,999 → ₹6,400 / ₹14,400 / ₹11,199.
+- Estimate-table total now shows ~~₹45,000~~ **₹31,999** (strikethrough). "SEO" → **"Technical SEO"** across the proposal.
+- Synced in proposal + `12-cost-and-effort-estimate.md`.
+
+---
+
 ## v1.2 — June 2026 — Pricing finalized (offer pricing)
 
 ### Changed
