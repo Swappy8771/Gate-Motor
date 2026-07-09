@@ -7,23 +7,25 @@ This document exists so that nothing is silently added or dropped. Every entry t
 
 ---
 
-## In Scope — v1.0
+## In Scope — v1.2
 
 ### Public Website
-- [ ] Responsive homepage with banner carousel
-- [ ] Product catalog listing (paginated)
-- [ ] Category browsing
-- [ ] Product detail page (images gallery, specs, price, stock status)
-- [ ] Search, filter (category, price), sort
-- [ ] SEO: unique slugs, dynamic metadata per product/category
-- [ ] Static / legal pages (About, Contact, Privacy, Terms, Return Policy) — **client provides copy, vendor builds the pages**
+- [x] Responsive homepage with banner carousel
+- [x] Product catalog listing (paginated)
+- [x] Category browsing
+- [x] Product detail page (images gallery, specs, price, stock status, **customer reviews & ratings**)
+- [x] Search, filter (category, price), sort
+- [x] SEO: unique slugs, dynamic metadata per product/category
+- [x] Static / legal pages (About, Contact, Privacy, Terms, Return Policy) — **client provides copy, vendor builds the pages**
+- [x] **Google My Business integration** (link/embed on contact/about pages)
+- [x] **Website auto-translator** (multi-language support, up to 50+ languages via third-party embed)
 
 ### Authentication & Roles
-- [ ] Customer registration (email, phone, password)
-- [ ] Email verification (link-based)
-- [ ] Login/logout (JWT) for all roles
-- [ ] Role-based access control: CUSTOMER / DEALER / ADMIN
-- [ ] Profile management & change password
+- [x] Customer registration (email, phone, password) — **with reCAPTCHA protection**
+- [x] Email verification (link-based) — **with reCAPTCHA on form**
+- [x] Login/logout (JWT) for all roles — **with reCAPTCHA on form**
+- [x] Role-based access control: CUSTOMER / DEALER / ADMIN — **with reCAPTCHA on dealer registration**
+- [x] Profile management & change password
 
 ### Dealer (B2B)
 - [ ] Dealer registration with GST number + document upload
@@ -54,9 +56,9 @@ This document exists so that nothing is silently added or dropped. Every entry t
 - [ ] Price breakdown: subtotal + GST (shipping = 0)
 
 ### Payments
-- [ ] Razorpay integration: **UPI, cards, net banking**
-- [ ] Server-side signature verification
-- [ ] Webhook backup (`payment.captured`, `payment.failed`)
+- [x] Razorpay integration: **UPI, cards, net banking, EMI** (3/6/12-month options)
+- [x] Server-side signature verification
+- [x] Webhook backup (`payment.captured`, `payment.failed`)
 
 ### Orders
 - [ ] Order placement with stock deduction (transaction)
@@ -74,10 +76,17 @@ This document exists so that nothing is silently added or dropped. Every entry t
 - [ ] Banner & promotion management
 - [ ] Reports: sales, revenue, top products
 
+### Product Reviews & Ratings ⭐ **(NEW in v1.2)**
+- [x] Customer review submission (rating 1–5 stars + comment)
+- [x] Admin moderation (approve/reject reviews)
+- [x] Review display on product detail pages (avg rating + review list)
+- [x] Review analytics in admin dashboard
+
 ### Notifications (email only)
-- [ ] Order confirmation email on payment (committed)
-- [ ] Order cancellation email (operational)
-- [ ] Dealer approval / rejection email (operational)
+- [x] Order confirmation email on payment (committed)
+- [x] Order cancellation email (operational)
+- [x] Dealer approval / rejection email (operational)
+- [x] **Email reminders for non-buyers** — auto-email customers who viewed products but did not purchase (configurable schedule)
 
 ### Cross-cutting
 - [ ] Mobile responsive (mobile / tablet / desktop)
@@ -86,20 +95,21 @@ This document exists so that nothing is silently added or dropped. Every entry t
 
 ---
 
-## Phase 2 — Planned, NOT in v1
+## Phase 2 — Planned, NOT in v1.2
 
-These are deliberately deferred. Building them in v1 is a **paid scope addition** (per proposal terms).
+These are deliberately deferred. Building them in v2 is a **paid scope addition** (per proposal terms).
 
 | Item | Why deferred |
 |------|--------------|
-| GST tax invoice PDF (with GSTIN, HSN, invoice numbering) | Decision D-03; proposal committed only to confirmation email |
-| Per-status-change email notifications (shipped, delivered, etc.) | Proposal committed only to confirmation email |
-| SMS notifications | Decision D-02; not in approved scope |
-| Nested category hierarchy (sub-categories) | Decision D-05; v1 is flat |
-| In-app returns / refund automation | Decision D-01; v1 returns are offline |
-| Live courier-API tracking | v1 uses external courier link |
-| Dealer self-service re-application after rejection | Manual admin reset in v1 |
-| Dealer-activity & inventory-alert reports | Included as optional extras only if time permits; proposal core = sales/revenue/top-products |
+| GST tax invoice PDF (with GSTIN, HSN, invoice numbering) | Decision D-03; v1.2 committed only to confirmation email |
+| Per-status-change email notifications (shipped, delivered, etc.) | Proposal committed only to confirmation email; v1.2 adds non-buyer reminders |
+| SMS notifications | Decision D-02; not in approved scope; email-only in v1.2 |
+| Nested category hierarchy (sub-categories) | Decision D-05; v1.2 is flat |
+| In-app returns / refund automation | Decision D-01; v1.2 returns are offline |
+| Live courier-API tracking (Delhivery, Ekart, etc.) | v1.2 uses external courier link; API integration = Phase 2 |
+| Dealer self-service re-application after rejection | Manual admin reset in v1.2 |
+| Advanced coupon & discount code system | Not in v1.2; planned for Phase 2 |
+| Location-wise shipping charges & pin-code routing | Deferred; v1.2 assumes pan-India free shipping |
 
 ---
 
@@ -107,16 +117,16 @@ These are deliberately deferred. Building them in v1 is a **paid scope addition*
 
 | Item | Note |
 |------|------|
-| Mobile apps (iOS / Android) | Web only |
+| Mobile apps (iOS / Android) | Web + responsive design; PWA not planned |
 | Automated GST verification (govt API) | Manual admin verification |
 | ERP / accounting / Tally integration | — |
-| Multi-vendor / marketplace | Single-seller platform |
-| Product reviews & ratings | — |
-| Wishlist / save-for-later | — |
+| Multi-vendor / marketplace | Single-seller platform only |
+| Wishlist / save-for-later | Not in v1.2 scope |
 | Guest checkout | Login required to buy |
-| EMI payments | UPI/cards/net banking only |
-| Loyalty / coupons / discount codes | Not requested |
-| Multi-currency / multi-language | INR / English only |
+| Loyalty / coupons / discount codes | Not in v1.2; Phase 2+ feature |
+| Multi-currency with dynamic switching | INR only; static translator via embed covers language |
+| Advanced AI recommendations | Not in v1.2; Phase 2+ feature |
+| Progressive Web App (PWA) | Responsive web sufficient for v1.2 |
 
 ---
 

@@ -22,6 +22,12 @@
 | D-11 | Order status `PROCESSING` | **Removed** from canonical enum | Proposal lifecycle = placed/confirmed/shipped/delivered; keep enum faithful | Vendor (rationale recorded) |
 | D-12 | Image storage | **Cloudinary** (products/banners); **private storage** for GST docs | CDN delivery for public images; GST docs must stay private | Vendor |
 | D-13 | Stock deduction timing | **At payment confirmation** via a guarded conditional update — not at placement | Prevents abandoned-order stock lock and last-unit oversell with minimal complexity (no reservation/saga system). Razorpay order created first so failures abort cleanly (audit F-05/F-06). | Vendor (audit-driven) |
+| D-14 | EMI payment option | **Enable in Razorpay checkout** (3/6/12 month options) | Razorpay backend handles eligibility; increases cart value for high-ticket items (gates, barriers). Added to v1.2 as low-effort integration. | Client request (v1.2) |
+| D-15 | Product reviews moderation | **Admin approval** before display (PENDING → APPROVED / REJECTED) | Prevents spam/abuse. Simple queue in admin dashboard. | Vendor (v1.2 design) |
+| D-16 | reCAPTCHA version & scope | **reCAPTCHA v3** on all public forms (registration, login, dealer signup, reviews) | Invisible to users, reduces friction vs v2. Protects against bot registration & spam reviews. | Vendor (v1.2 security) |
+| D-17 | Email reminders timing | **Daily scheduled job** (configurable; default 7am IST) for non-buyers from past 3 days | Balances frequency vs inbox fatigue. Excludes recent visitors. Admin dashboard shows opt-out rate. | Vendor (v1.2 marketing) |
+| D-18 | Website translator scope | **Third-party embed** (Google Translate) — 50+ languages automatic | No backend translation; SEO benefit limited but reaches wider audience. Option to upgrade to professional translation (Phase 2). | Vendor (v1.2 expansion) |
+| D-19 | Google My Business | **Link + optional hours/location embed** on About/Contact pages | Not a deep API integration; light-touch local SEO improvement. Requires client to own/verify Google My Business profile. | Vendor (v1.2 SEO) |
 
 ---
 

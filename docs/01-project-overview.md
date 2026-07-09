@@ -104,33 +104,34 @@ Production deployment, SSL, domain configuration, post-launch handover and suppo
 
 > Authoritative list lives in **[06 — Scope Register](./06-scope-register.md)**. Quick view:
 
-**In scope (v1):** Public website, customer portal, dealer portal (with approval gate), admin dashboard, dual pricing, catalog + categories (flat) + specs, inventory (qty internal, in/out status to customer), cart + checkout (login required, free shipping), Razorpay (UPI/cards/net banking), order lifecycle to delivered + cancel, AWB courier-link tracking, order confirmation email, banners, reports (sales/revenue/top products), responsive web, deployment.
+**In scope (v1.2):** Public website, customer portal, dealer portal (with approval gate), admin dashboard, dual pricing, catalog + categories (flat) + specs, inventory (qty internal, in/out status to customer), cart + checkout (login required, free shipping), Razorpay (UPI/cards/net banking, EMI option), order lifecycle to delivered + cancel, AWB courier-link tracking, order confirmation + dealer approval + cancellation emails, email reminders for non-buyers, banners, reports (sales/revenue/top products), product reviews & ratings, reCAPTCHA on forms, Google My Business integration, website auto-translator, responsive web, deployment.
 
-**Phase 2 (not v1):** GST invoice PDF, per-status email/SMS notifications, nested category hierarchy, in-app returns/refunds, courier-API live tracking, dealer self-service re-application.
+**Phase 2 (not v1):** GST invoice PDF, per-status email/SMS notifications, nested category hierarchy, in-app returns/refunds, courier-API live tracking, dealer self-service re-application, coupon codes, live shipping integrations.
 
-**Out of scope:** Mobile apps (iOS/Android), automated GST verification API, ERP/accounting integration, multi-vendor marketplace, product reviews/ratings, wishlist, guest checkout, EMI payments.
+**Out of scope:** Mobile apps (iOS/Android), automated GST verification API, ERP/accounting integration, multi-vendor marketplace, wishlist, guest checkout.
 
 ---
 
 ## Timeline
 
-**3.5 weeks · solo developer · end-to-end through go-live.** (Effort basis ~41 developer-days — see [12 — Cost & Effort Estimate](./12-cost-and-effort-estimate.md).)
+**4.5–5 weeks · solo developer · end-to-end through go-live.** (Effort basis ~51–56 developer-days — see [12 — Cost & Effort Estimate](./12-cost-and-effort-estimate.md).)
 
 | Phase | Deliverable |
 |-------|-------------|
-| **Week 1** — Foundation, Auth & Catalog | Project setup, DB schema, customer + dealer auth (JWT), GST onboarding + admin approval, RBAC, product & category management, dual pricing, public catalog with search/filter |
-| **Week 2** — Cart, Payments & Orders | Inventory, cart, checkout with address, Razorpay (UPI/cards/net banking), payment verification + webhook, order lifecycle & cancellation, courier tracking |
-| **Week 3** — Admin, Reports & Notifications | Admin dashboard (orders/dealers/inventory/banners), reports & analytics, order confirmation + dealer approval emails, static/legal pages, SEO |
-| **Final ½ Week** — QA, Polish & Go-Live | Responsive polish, performance + security pass, UAT & bug fixes, deployment, domain/SSL, go-live |
+| **Week 1** — Foundation, Auth & Catalog | Project setup, DB schema, customer + dealer auth (JWT), GST onboarding + admin approval, RBAC, product & category management, dual pricing, public catalog with search/filter, reCAPTCHA integration |
+| **Week 2** — Cart, Payments & Orders | Inventory, cart, checkout with address, Razorpay (UPI/cards/net banking/EMI), payment verification + webhook, order lifecycle & cancellation, courier tracking |
+| **Week 3** — Admin, Reports & Notifications | Admin dashboard (orders/dealers/inventory/banners), reports & analytics, order confirmation + dealer approval emails, product reviews & ratings system, email reminders for non-buyers, static/legal pages, SEO |
+| **Week 4** — Enhanced Features & Polish | Google My Business integration, website auto-translator, responsive polish, performance + security pass, UAT & bug fixes, deployment, domain/SSL, go-live |
 
 ---
 
 ## Deliverables
-1. Responsive Public Website
-2. Customer Portal
-3. Dealer Portal
-4. Admin Dashboard
-5. Deployment & Go-Live Support (SSL, domain, hosting handover)
+1. Responsive Public Website (with reviews, translator, Google My Business integration)
+2. Customer Portal (with email reminders, EMI payments)
+3. Dealer Portal (with approval gate, dealer pricing)
+4. Admin Dashboard (product/inventory/order/dealer/review management, reports)
+5. Security & Conversion Features (reCAPTCHA, product reviews, email reminders)
+6. Deployment & Go-Live Support (SSL, domain, hosting handover)
 
 ---
 
@@ -138,8 +139,8 @@ Production deployment, SSL, domain configuration, post-launch handover and suppo
 
 | Milestone | Trigger | % |
 |-----------|---------|---|
-| Project Kickoff | On agreement signing | 30% |
-| Mid Delivery | After Week 2 | 40% |
-| Final Delivery | Post go-live & handover | 30% |
+| Project Kickoff | On agreement signing | 20% |
+| Mid Delivery | After Week 2 (core commerce complete) | 45% |
+| Final Delivery | Post go-live & handover | 35% |
 
-**Terms (from approved proposal):** Source code ownership transfers on final payment · Client provides Razorpay merchant credentials · Hosting/domain borne by client · Scope additions quoted separately · 2 design-revision rounds per milestone · Proposal valid 15 days · 30-day post-launch warranty for in-scope bugs.
+**Terms (v1.2 amended scope):** Source code ownership transfers on final payment · Client provides Razorpay merchant credentials · Hosting/domain borne by client · Additional scope quoted separately · 2 design-revision rounds per milestone · Timeline extended to 4.5–5 weeks to include 6 conversion-focused features · 30-day post-launch warranty for in-scope bugs · Pricing adjusted to reflect additional feature scope (see [12 — Cost & Effort Estimate](./12-cost-and-effort-estimate.md)).

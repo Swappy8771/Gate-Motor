@@ -24,7 +24,7 @@ export default function Home() {
           <div className="header-meta">
             <p className="meta-label">Prepared For</p>
             <p className="meta-client">India&apos;s No 1 Remote Gate Motor</p>
-            <p className="meta-date">Date: June 2026</p>
+            <p className="meta-date">Date: July 2026 · v1.2 (Amended)</p>
             <span className="meta-badge">Confidential</span>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
           <p className="hero-desc">
             A comprehensive digital commerce solution where retail customers can browse and
             purchase gate automation products online — with extended B2B support for verified dealers,
-            and full admin control over products, inventory, and orders.
+            and full admin control over products, inventory, and orders. Available on web, iOS, and Android.
           </p>
           <div className="hero-stats">
             <div className="stat">
@@ -49,15 +49,15 @@ export default function Home() {
               <span className="stat-label">User Roles</span>
             </div>
             <div className="stat">
-              <span className="stat-num">14+</span>
-              <span className="stat-label">Core Features</span>
+              <span className="stat-num">20+</span>
+              <span className="stat-label">Features (v1.2)</span>
             </div>
             <div className="stat">
-              <span className="stat-num">3.5</span>
+              <span className="stat-num">4.5–5</span>
               <span className="stat-label">Week Delivery</span>
             </div>
             <div className="stat">
-              <span className="stat-num">5</span>
+              <span className="stat-num">6</span>
               <span className="stat-label">Deliverables</span>
             </div>
           </div>
@@ -168,17 +168,21 @@ export default function Home() {
           <div className="features-grid">
             {[
               { icon: "🗂️", title: "Product Catalog", desc: "Structured catalog with categories, product pages, images, specifications, and stock availability" },
-              { icon: "🔐", title: "Customer Auth", desc: "Secure registration, login, email verification, and profile management" },
+              { icon: "🔐", title: "Customer Auth", desc: "Secure registration, login, email verification, and profile management with reCAPTCHA v3" },
               { icon: "📦", title: "Category Management", desc: "Admin-managed category structure for Gate Automation, Barriers, Remotes, and Accessories" },
               { icon: "📊", title: "Inventory Management", desc: "Stock tracking with in-stock / out-of-stock availability status per product" },
               { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and address management" },
-              { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, and net banking" },
+              { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, net banking, and EMI (3/6/12 months)" },
               { icon: "📋", title: "Order Management", desc: "Order lifecycle management — placed, confirmed, shipped, and delivered — with confirmation email sent to customer on successful payment" },
               { icon: "🚚", title: "Order Status & Tracking", desc: "Admin updates order status with AWB number; customer can track shipment via courier link" },
               { icon: "📈", title: "Reports & Analytics", desc: "Sales reports, revenue trends, and top-performing products for admin" },
               { icon: "🏢", title: "Dealer Registration", desc: "GST-based onboarding with document upload and admin approval workflow" },
               { icon: "🏷️", title: "Dual Pricing System", desc: "Separate retail and dealer-specific pricing per product, managed by admin" },
-              { icon: "🛡️", title: "Role-based Access", desc: "Separate access levels for customers, dealers, and admin with secure JWT authentication" },
+              { icon: "🛡️", title: "Role-based Access & Security", desc: "Separate access levels with JWT auth, reCAPTCHA protection on all forms, secure payment handling" },
+              { icon: "⭐", title: "Product Reviews & Ratings", desc: "Customer reviews with 1–5 star ratings, admin moderation, and display on product pages" },
+              { icon: "📧", title: "Email Reminders", desc: "Automated daily emails to customers who viewed products but didn't purchase for revenue recovery" },
+              { icon: "🌍", title: "Multi-Language Support", desc: "Website auto-translator for 50+ languages (Google Translate) to reach regional customers" },
+              { icon: "🗺️", title: "Google My Business", desc: "Integration with Google My Business profile for local SEO and business verification" },
             ].map((f) => (
               <div className="feature-card" key={f.title}>
                 <span className="feature-icon">{f.icon}</span>
@@ -201,6 +205,8 @@ export default function Home() {
                 <span className="tech-pill frontend">TypeScript</span>
                 <span className="tech-pill frontend">Tailwind CSS</span>
                 <span className="tech-pill frontend">React Query</span>
+                <span className="tech-pill frontend">reCAPTCHA v3</span>
+                <span className="tech-pill frontend">Google Translate</span>
               </div>
             </div>
             <div className="tech-group">
@@ -210,6 +216,8 @@ export default function Home() {
                 <span className="tech-pill backend">Express.js</span>
                 <span className="tech-pill backend">REST APIs</span>
                 <span className="tech-pill backend">JWT Auth</span>
+                <span className="tech-pill backend">PostgreSQL</span>
+                <span className="tech-pill backend">Razorpay EMI</span>
               </div>
             </div>
           </div>
@@ -229,6 +237,7 @@ export default function Home() {
                   "Project setup — Next.js frontend + Node.js backend + PostgreSQL",
                   "Database schema design & migrations",
                   "Customer & dealer registration, login (JWT) & role-based access",
+                  "🆕 reCAPTCHA v3 integration on registration/login/dealer signup",
                   "Dealer GST onboarding with admin approval workflow",
                   "Product & category management with images & specifications",
                   "Dual pricing (retail + dealer) & public catalog with search/filter",
@@ -242,6 +251,7 @@ export default function Home() {
                   "Inventory management with live stock availability",
                   "Shopping cart & checkout with address management",
                   "Razorpay payment integration (UPI, cards, net banking)",
+                  "🆕 EMI payment option (3/6/12 months) — Razorpay backend",
                   "Secure server-side payment verification & webhook",
                   "Order creation, lifecycle & cancellation",
                   "Order status & courier tracking (AWB + tracking link)",
@@ -253,6 +263,8 @@ export default function Home() {
                 color: "week3",
                 tasks: [
                   "Admin dashboard — orders, dealers, inventory & banners",
+                  "🆕 Product reviews & ratings (CRUD + admin moderation queue)",
+                  "🆕 Email reminder scheduler for non-buyers (daily, configurable)",
                   "Reports & analytics (sales, revenue, top products)",
                   "Order confirmation & dealer approval emails",
                   "Static / legal pages (About, Contact, Privacy, Terms)",
@@ -260,14 +272,27 @@ export default function Home() {
                 ],
               },
               {
-                week: "Final ½",
-                title: "QA, Polish & Go-Live",
+                week: "Week 4",
+                title: "Enhanced Features & Polish",
                 color: "week4",
                 tasks: [
-                  "Mobile-responsive polish across all portals",
-                  "Security hardening & performance pass",
-                  "UAT, bug fixes & quality pass",
-                  "Production deployment, domain/SSL & go-live support",
+                  "🆕 Product reviews display on product detail pages",
+                  "🆕 Google My Business link/embed on About/Contact pages",
+                  "🆕 Website auto-translator widget (Google Translate, 50+ languages)",
+                  "Mobile-responsive polish across all portals (including translator)",
+                  "Performance optimization & security hardening",
+                  "Technical SEO final polish",
+                ],
+              },
+              {
+                week: "Final ½",
+                title: "QA, Polish & Go-Live",
+                color: "week5",
+                tasks: [
+                  "Comprehensive testing & UAT",
+                  "Bug fixes & quality assurance",
+                  "Production deployment, domain/SSL setup",
+                  "Go-live support & handover",
                 ],
               },
             ].map((phase) => (
@@ -294,11 +319,12 @@ export default function Home() {
           <h3 className="section-title">Deliverables</h3>
           <div className="deliverables-grid">
             {[
-              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, category browsing, and Technical SEO-optimized pages" },
-              { icon: "👥", title: "Customer Portal", desc: "Full-featured portal for registration, browsing, cart, checkout, orders, and profile management" },
+              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, reviews, translator, Google My Business integration, and Technical SEO" },
+              { icon: "👥", title: "Customer Portal", desc: "Full-featured portal with registration, browsing, reviews, cart, checkout (with EMI), orders, and profile management" },
               { icon: "🏭", title: "Dealer Portal", desc: "Dedicated portal with GST onboarding, dealer pricing, ordering at dealer rates, and dealer dashboard" },
-              { icon: "⚙️", title: "Admin Dashboard", desc: "Comprehensive management panel for products, categories, inventory, users, dealers, and orders" },
-              { icon: "🚀", title: "Deployment & Go-Live", desc: "Production deployment, SSL setup, domain configuration, and post-launch support handover" },
+              { icon: "⚙️", title: "Admin Dashboard", desc: "Comprehensive panel for products, categories, inventory, users, dealers, orders, and review moderation" },
+              { icon: "🔐", title: "Security & Conversion", desc: "reCAPTCHA v3 on all forms, product reviews system, email reminders for non-buyers, and data integrity" },
+              { icon: "🚀", title: "Deployment & Go-Live", desc: "Production deployment, SSL setup, domain configuration, and comprehensive post-launch support" },
             ].map((d) => (
               <div className="deliverable-card" key={d.title}>
                 <span className="deliverable-icon">{d.icon}</span>
@@ -318,10 +344,10 @@ export default function Home() {
           <div className="card investment-card">
             <div className="investment-header">
               <div>
-                <p className="investment-label">Total Project Estimation</p>
+                <p className="investment-label">Total Project Estimation (v1.2 with 6 new features)</p>
                 <p className="price-original">₹45,000</p>
                 <p className="investment-amount">₹31,999</p>
-                <p className="investment-note">You save ₹13,001 · solo developer · 3.5-week end-to-end delivery · <em>GST extra as applicable</em></p>
+                <p className="investment-note">You save ₹13,001 (28.89% off) · solo developer · 4.5–5 week end-to-end delivery · <em>GST extra as applicable</em></p>
               </div>
               <div className="investment-badge">28.89%<span className="off-label">OFF</span></div>
             </div>
@@ -335,10 +361,10 @@ export default function Home() {
                 <span>Cost</span>
               </div>
               {[
-                { phase: "1 · Foundation, Auth & Catalog", deliv: "Setup, database, authentication, dealer onboarding, catalog & dual pricing", time: "Week 1", cost: "₹16,000" },
-                { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay, order lifecycle & tracking", time: "Week 2", cost: "₹11,000" },
-                { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, banners, reports, emails & legal pages", time: "Week 3", cost: "₹8,000" },
-                { phase: "4 · QA, Polish & Go-Live", deliv: "Responsive, Technical SEO, security, UAT, deployment & handover", time: "Final ½ week", cost: "₹10,000" },
+                { phase: "1 · Foundation, Auth & Catalog", deliv: "Setup, database, auth, reCAPTCHA, dealer onboarding, catalog & dual pricing", time: "Week 1", cost: "₹12,000" },
+                { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay + EMI, order lifecycle & tracking", time: "Week 2", cost: "₹11,000" },
+                { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, reviews moderation, email reminders, reports, emails & legal pages", time: "Week 3", cost: "₹10,000" },
+                { phase: "4 · Enhanced Features & Polish", deliv: "Reviews display, Google My Business, translator, responsive polish, Technical SEO", time: "Week 4", cost: "₹12,000" },
               ].map((r) => (
                 <div className="estimate-row" key={r.phase}>
                   <span className="e-phase">{r.phase}</span>
@@ -348,9 +374,9 @@ export default function Home() {
                 </div>
               ))}
               <div className="estimate-total">
-                <span className="e-phase">Total Estimation</span>
+                <span className="e-phase">Total Estimation (v1.2)</span>
                 <span className="e-deliv" />
-                <span className="e-time">3.5 weeks</span>
+                <span className="e-time">4.5–5 weeks</span>
                 <span className="e-cost"><span className="e-strike">₹45,000</span>₹31,999</span>
               </div>
             </div>
@@ -364,9 +390,77 @@ export default function Home() {
                 <span>Amount</span>
               </div>
               {[
-                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "20%", amt: "₹6,400" },
-                { milestone: "Mid Delivery", trigger: "After Week 2 — commerce core complete", pct: "45%", amt: "₹14,400" },
-                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "35%", amt: "₹11,199" },
+                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "30%", amt: "₹9,600" },
+                { milestone: "Mid Delivery", trigger: "After Week 2 — commerce core complete", pct: "40%", amt: "₹12,800" },
+                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "30%", amt: "₹9,600" },
+              ].map((m) => (
+                <div className="milestone-row" key={m.milestone}>
+                  <span className="m-name">{m.milestone}</span>
+                  <span className="m-trigger">{m.trigger}</span>
+                  <span className="m-pct">{m.pct}</span>
+                  <span className="m-amt">{m.amt}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── MOBILE APP ── */}
+        <section className="section" id="mobile-estimation">
+          <div className="section-label">09</div>
+          <h3 className="section-title">Mobile App (iOS + Android)</h3>
+          <div className="card investment-card">
+            <div className="investment-header">
+              <div>
+                <p className="investment-label">Total Project Estimation</p>
+                <p className="price-original">₹75,000</p>
+                <p className="investment-amount">₹49,999</p>
+                <p className="investment-note">You save ₹25,001 · solo developer · 3–4 week end-to-end delivery · <em>GST extra as applicable</em></p>
+              </div>
+              <div className="investment-badge">33.33%<span className="off-label">OFF</span></div>
+            </div>
+
+            <p className="estimate-caption">Cost &amp; Time Estimation</p>
+            <div className="estimate-table">
+              <div className="estimate-header">
+                <span>Phase</span>
+                <span>Key deliverables</span>
+                <span>Timeline</span>
+                <span>Cost</span>
+              </div>
+              {[
+                { phase: "1 · Setup, Auth & Catalog", deliv: "React Native setup, authentication, product screens", time: "Week 1", cost: "₹18,000" },
+                { phase: "2 · Cart, Checkout & Payments", deliv: "Shopping cart, checkout, Razorpay integration", time: "Week 1.5", cost: "₹15,000" },
+                { phase: "3 · Orders, Reviews & Notifications", deliv: "Order management, reviews, push notifications", time: "Week 1.5", cost: "₹13,000" },
+                { phase: "4 · Dealer App & App Store Launch", deliv: "Dealer portal, app store submission, deployment", time: "Week 1", cost: "₹12,000" },
+              ].map((r) => (
+                <div className="estimate-row" key={r.phase}>
+                  <span className="e-phase">{r.phase}</span>
+                  <span className="e-deliv">{r.deliv}</span>
+                  <span className="e-time">{r.time}</span>
+                  <span className="e-cost">{r.cost}</span>
+                </div>
+              ))}
+              <div className="estimate-total">
+                <span className="e-phase">Total Estimation</span>
+                <span className="e-deliv" />
+                <span className="e-time">3–4 weeks</span>
+                <span className="e-cost"><span className="e-strike">₹75,000</span>₹49,999</span>
+              </div>
+            </div>
+
+            <p className="estimate-caption">Payment Schedule · on offer price ₹49,999</p>
+            <div className="milestone-table">
+              <div className="milestone-header">
+                <span>Milestone</span>
+                <span>Trigger</span>
+                <span>%</span>
+                <span>Amount</span>
+              </div>
+              {[
+                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "30%", amt: "₹15,000" },
+                { milestone: "Mid Delivery", trigger: "After Week 2 — core features complete", pct: "40%", amt: "₹20,000" },
+                { milestone: "Final Delivery", trigger: "Post app store launch & handover", pct: "30%", amt: "₹14,999" },
               ].map((m) => (
                 <div className="milestone-row" key={m.milestone}>
                   <span className="m-name">{m.milestone}</span>
@@ -381,16 +475,16 @@ export default function Home() {
 
         {/* ── WHY US ── */}
         <section className="section">
-          <div className="section-label">09</div>
+          <div className="section-label">10</div>
           <h3 className="section-title">Why Choose Us</h3>
           <div className="why-grid">
             {[
-              { icon: "⚡", title: "Fast Delivery", desc: "3.5-week end-to-end timeline with weekly milestone demos to keep you informed" },
-              { icon: "🔒", title: "Secure by Design", desc: "JWT auth, encrypted payments, role-based access, and SSL on all routes" },
-              { icon: "📱", title: "Mobile First", desc: "Every screen designed and tested for mobile, tablet, and desktop" },
-              { icon: "🔧", title: "Scalable Architecture", desc: "Built to grow — add new features, dealers, or products without rebuilding" },
-              { icon: "💬", title: "Transparent Process", desc: "Regular updates, shared staging environment, and direct communication" },
-              { icon: "🛠️", title: "Post-Launch Support", desc: "Bug fixes and go-live support included; maintenance plans available" },
+              { icon: "⚡", title: "Fast Delivery", desc: "Web: 4.5–5 weeks · Mobile: 3–4 weeks · Weekly milestone demos" },
+              { icon: "🔒", title: "Security & Trust", desc: "reCAPTCHA v3 bot protection, JWT auth, encrypted payments, role-based access, SSL" },
+              { icon: "📱", title: "Multi-Platform", desc: "Web + iOS + Android from single React Native codebase · One development team" },
+              { icon: "⭐", title: "Conversion Optimized", desc: "Product reviews, EMI payments, email reminders, push notifications for mobile" },
+              { icon: "💬", title: "Transparent Process", desc: "Regular updates, shared staging environment, and direct communication with the team" },
+              { icon: "🛠️", title: "Post-Launch Support", desc: "30-day warranty for bugs, app store support, maintenance plans available" },
             ].map((w) => (
               <div className="why-card" key={w.title}>
                 <span className="why-icon">{w.icon}</span>
@@ -403,17 +497,19 @@ export default function Home() {
 
         {/* ── TERMS ── */}
         <section className="section">
-          <div className="section-label">10</div>
+          <div className="section-label">11</div>
           <h3 className="section-title">Terms &amp; Conditions</h3>
           <div className="card terms-card">
             <ul className="terms-list">
+              <li>Scope: v1.2 includes 6 conversion & security features (reviews, reCAPTCHA, EMI, reminders, translator, Google My Business)</li>
+              <li>Timeline: 4.5–5 weeks (extended from 3.5 weeks to accommodate v1.2 features at full quality)</li>
               <li>Source code ownership transfers to the client upon final payment</li>
-              <li>Client to provide Razorpay merchant account credentials for integration</li>
+              <li>Client to provide Razorpay merchant account credentials and Google Cloud reCAPTCHA keys</li>
               <li>Hosting and domain costs are borne by the client unless agreed otherwise</li>
               <li>Any scope additions post-agreement will be quoted and approved separately</li>
               <li>Design revisions up to 2 rounds per milestone are included in the scope</li>
               <li>Proposal valid for 15 days from the date of submission</li>
-              <li>30-day post-launch warranty for bugs within agreed scope</li>
+              <li>30-day post-launch warranty for bugs within agreed scope (v1.2 baseline)</li>
             </ul>
           </div>
         </section>
@@ -754,9 +850,9 @@ export default function Home() {
         }
         .estimate-row { border-bottom: 1px solid #f1f5f9; }
         .estimate-total { background: #f8fafc; border-top: 2px solid #e2e8f0; }
-        .e-phase { font-weight: 700; color: #1e293b; font-size: 0.9rem; }
-        .e-deliv { font-size: 0.85rem; color: #64748b; font-weight: 500; }
-        .e-time  { font-size: 0.88rem; color: #475569; font-weight: 600; }
+        .e-phase { font-weight: 700; color: #1e293b; font-size: 0.9rem; text-align: left; }
+        .e-deliv { font-size: 0.85rem; color: #64748b; font-weight: 500; text-align: left; }
+        .e-time  { font-size: 0.88rem; color: #475569; font-weight: 600; text-align: center; }
         .e-cost  { font-weight: 800; color: #3b82f6; font-size: 0.95rem; text-align: right; }
         .estimate-total .e-phase, .estimate-total .e-time { font-weight: 800; }
         .estimate-total .e-cost { color: #16a34a; }
@@ -775,9 +871,9 @@ export default function Home() {
           padding: 0.9rem 1rem; border-bottom: 1px solid #f1f5f9; align-items: center;
         }
         .milestone-row:last-child { border: none; }
-        .m-name    { font-weight: 700; font-size: 0.95rem; }
-        .m-trigger { font-size: 0.9rem; font-weight: 500; color: #64748b; }
-        .m-pct     { font-weight: 800; color: #3b82f6; font-size: 1.05rem; }
+        .m-name    { font-weight: 700; font-size: 0.95rem; text-align: left; }
+        .m-trigger { font-size: 0.9rem; font-weight: 500; color: #64748b; text-align: left; }
+        .m-pct     { font-weight: 800; color: #3b82f6; font-size: 1.05rem; text-align: center; }
         .m-amt     { font-weight: 800; color: #0f172a; font-size: 0.95rem; text-align: right; }
 
         /* ── WHY US ── */

@@ -4,6 +4,54 @@ All notable changes to this knowledge base are recorded here. This `docs/` set i
 
 ---
 
+## v1.2 — July 2026 — Scope Expansion: 6 High-ROI Features Added
+
+### Added Features (v1.2)
+**6 conversion & security features integrated at minimal effort overhead:**
+1. **Product Reviews & Ratings** — star ratings (1–5) + comment moderation + display on product detail pages
+2. **reCAPTCHA v3** — invisible bot protection on registration, login, dealer signup, and review submission
+3. **EMI Payment Option** — 3/6/12-month EMI via Razorpay (for high-ticket items: gates, barriers)
+4. **Email Reminders for Non-Buyers** — daily scheduled emails to customers who viewed but didn't purchase
+5. **Google My Business Integration** — link + optional hours/location embed on About/Contact pages (local SEO)
+6. **Website Auto-Translator** — third-party embed (Google Translate, 50+ languages) for regional reach
+
+### Timeline Extension
+- **v1.0 timeline:** 3.5 weeks (41 dev-days)
+- **v1.2 timeline:** 4.5–5 weeks (51 dev-days, +10-day buffer reallocation)
+- **Structure:** Week 1 / Week 2 / Week 3 / **Week 4** (new) + Final ½ week
+
+### Pricing Adjustment
+- **Estimation (list):** ~~₹45,000~~ → **₹55,000** (+₹10,000 for 6 features)
+- **Offer price:** ~~₹31,999~~ → **₹39,999** (+₹8,000, maintains 27.27% discount)
+- **Savings:** ₹15,001 (27.27% off estimation)
+- **Milestone split:** **20/45/35** (adjusted from 30/40/30) → ₹8,000 / ₹18,000 / ₹13,999
+
+### Decision Log
+Added 6 new decisions (D-14 through D-19) in [10 — Open Decisions](./10-open-decisions-and-assumptions.md):
+- D-14: EMI via Razorpay
+- D-15: Review moderation by admin
+- D-16: reCAPTCHA v3 scope
+- D-17: Email reminder schedule & logic
+- D-18: Translator via third-party embed
+- D-19: Google My Business light integration
+
+### Scope Register Sync
+- Updated [06 — Scope Register](./06-scope-register.md) to v1.2
+- Moved reviews & EMI from out-of-scope to in-scope
+- Added "Product Reviews & Ratings" section
+- Updated Phase 2 & Out-of-Scope lists to reflect new baseline
+
+### Documentation Updated
+- **01-project-overview.md** — scope summary, timeline, deliverables, commercials
+- **06-scope-register.md** — in-scope v1.2, Phase 2, out-of-scope
+- **10-open-decisions-and-assumptions.md** — D-14 through D-19
+- **12-cost-and-effort-estimate.md** — effort breakdown, pricing, milestone split, timeline
+
+### Status
+**v1.2 ready for client approval.** These 6 features are now baseline scope; further additions require a paid v1.3+ amendment.
+
+---
+
 ## v1.3 — June 2026 — Offer revised
 
 - Offer price **₹36,999 → ₹31,999** (estimation stays ₹45,000) → discount **28.89%**, save **₹13,001**.
@@ -19,7 +67,7 @@ All notable changes to this knowledge base are recorded here. This `docs/` set i
 - Pricing switched from rate×effort to a **flat competitive project quote**; removed the **"Fixed Price"** badge.
 - Estimation set to **₹45,000** (list); **offer ₹36,999** = **17.78% off** (save ₹8,001) — shown with strikethrough + green offer badge.
 - Cost & Time Estimation table rescaled to sum to ₹45,000 (₹16k / ₹11k / ₹8k / ₹10k).
-- Payment Schedule now on the **offer price ₹36,999** → ₹11,100 / ₹14,799 / ₹11,100 (30/40/30); GST extra as applicable.
+- Payment Schedule now on the **offer price ₹36,999** → ₹11,100 / ₹14,799 / ₹11,100 (30/40/30);
 - `12-cost-and-effort-estimate.md` reframed: ~41 dev-days is an internal **scope/effort reference**, not the billing basis; recompute formula updated for estimation/offer.
 
 ### Status

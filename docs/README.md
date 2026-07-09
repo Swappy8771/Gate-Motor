@@ -1,11 +1,11 @@
 # Project Knowledge Base — India's No 1 Remote Gate Motor
 ## E-Commerce Platform for Gate Automation — **B2C-First · B2B-Ready**
 
-> **Status:** Final **v1.3** — pricing: ₹45,000 → offer **₹31,999** (28.89% off); post-audit corrections applied
+> **Status:** Final **v1.2** — 6 high-ROI features added; pricing: ~~₹45,000~~ **₹55,000** → offer **₹39,999** (27.27% off); timeline extended to 4.5–5 weeks
 > **Vendor:** Qodeways Technologies Pvt Ltd · https://qodeways.com/
 > **Client:** India's No 1 Remote Gate Motor · Chakan MIDC, Pune 410501
-> **Stack:** Next.js 14 + Node.js/Express + PostgreSQL/Prisma + Razorpay
-> **Source of truth:** This `docs/` set governs all development. The approved proposal lives at `app/page.tsx`.
+> **Stack:** Next.js 14 + Node.js/Express + PostgreSQL/Prisma + Razorpay + reCAPTCHA
+> **Source of truth:** This `docs/` set governs all development. The amended proposal lives at `app/page.tsx`.
 
 ---
 
@@ -73,16 +73,17 @@ Sliding Gate Automation · Swing Gate Automation · Boom Barrier Automation · W
 ### The 10 canonical business rules
 Dual pricing · dealer approval gate · manual GST check · login required to buy · free shipping (₹0) · forward-only lifecycle + cancel · AWB courier-link tracking · email-only (confirmation + dealer approval) · stock deducts at payment confirmation (guarded) · immutable order + address snapshots. (Full text in [01 — Overview](./01-project-overview.md).)
 
-### What's NOT in v1
-GST invoice PDF · SMS · per-status emails · nested categories · in-app returns · live courier tracking · EMI · guest checkout · reviews · wishlist · mobile apps. (See [06 — Scope Register](./06-scope-register.md).)
+### What's NOT in v1.2
+GST invoice PDF · SMS · per-status emails · nested categories · in-app returns · live courier tracking · coupon codes · guest checkout · wishlist · mobile apps · multi-vendor marketplace. (See [06 — Scope Register](./06-scope-register.md).) **Note:** Reviews, EMI, reCAPTCHA, email reminders, translator, Google My Business ARE now in v1.2.
 
-### Timeline
+### Timeline (v1.2)
 | Week | Focus |
 |------|-------|
-| 1 | Auth, roles, dealer onboarding + approval |
-| 2 | Catalog, categories, dual pricing, inventory, search |
-| 3 | Cart, checkout, Razorpay, orders, confirmation email |
-| 4 | Banners, reports, responsive + security, UAT, deploy |
+| 1 | Auth, roles, dealer onboarding + approval, **reCAPTCHA** |
+| 2 | Catalog, categories, dual pricing, inventory, **EMI option** |
+| 3 | Cart, checkout, Razorpay, orders, **reviews moderation**, **email reminders** |
+| 4 | **Google My Business**, **auto-translator**, banners, reports, responsive, security, UAT |
+| Final ½ | Deploy, domain/SSL, go-live |
 
 ---
 
