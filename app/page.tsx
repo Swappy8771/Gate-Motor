@@ -174,15 +174,13 @@ export default function Home() {
               { icon: "🛒", title: "Shopping Cart & Checkout", desc: "Persistent cart with quantity controls, price breakdown, and address management" },
               { icon: "💳", title: "Razorpay Payments", desc: "Secure checkout supporting UPI, cards, net banking, and EMI (3/6/12 months)" },
               { icon: "📋", title: "Order Management", desc: "Order lifecycle management — placed, confirmed, shipped, and delivered — with confirmation email sent to customer on successful payment" },
-              { icon: "🚚", title: "Order Status & Tracking", desc: "Admin updates order status with AWB number; customer can track shipment via courier link" },
+              { icon: "🚚", title: "Order Status Updates", desc: "Admin updates order status with AWB number; customers receive status notifications" },
               { icon: "📈", title: "Reports & Analytics", desc: "Sales reports, revenue trends, and top-performing products for admin" },
               { icon: "🏢", title: "Dealer Registration", desc: "GST-based onboarding with document upload and admin approval workflow" },
               { icon: "🏷️", title: "Dual Pricing System", desc: "Separate retail and dealer-specific pricing per product, managed by admin" },
               { icon: "🛡️", title: "Role-based Access & Security", desc: "Separate access levels with JWT auth, reCAPTCHA protection on all forms, secure payment handling" },
               { icon: "⭐", title: "Product Reviews & Ratings", desc: "Customer reviews with 1–5 star ratings, admin moderation, and display on product pages" },
-              { icon: "📧", title: "Email Reminders", desc: "Automated daily emails to customers who viewed products but didn't purchase for revenue recovery" },
               { icon: "🌍", title: "Multi-Language Support", desc: "Website auto-translator for 50+ languages (Google Translate) to reach regional customers" },
-              { icon: "🗺️", title: "Google My Business", desc: "Integration with Google My Business profile for local SEO and business verification" },
             ].map((f) => (
               <div className="feature-card" key={f.title}>
                 <span className="feature-icon">{f.icon}</span>
@@ -264,7 +262,6 @@ export default function Home() {
                 tasks: [
                   "Admin dashboard — orders, dealers, inventory & banners",
                   "🆕 Product reviews & ratings (CRUD + admin moderation queue)",
-                  "🆕 Email reminder scheduler for non-buyers (daily, configurable)",
                   "Reports & analytics (sales, revenue, top products)",
                   "Order confirmation & dealer approval emails",
                   "Static / legal pages (About, Contact, Privacy, Terms)",
@@ -277,7 +274,6 @@ export default function Home() {
                 color: "week4",
                 tasks: [
                   "🆕 Product reviews display on product detail pages",
-                  "🆕 Google My Business link/embed on About/Contact pages",
                   "🆕 Website auto-translator widget (Google Translate, 50+ languages)",
                   "Mobile-responsive polish across all portals (including translator)",
                   "Performance optimization & security hardening",
@@ -319,11 +315,11 @@ export default function Home() {
           <h3 className="section-title">Deliverables</h3>
           <div className="deliverables-grid">
             {[
-              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, reviews, translator, Google My Business integration, and Technical SEO" },
+              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, reviews, translator, and Technical SEO" },
               { icon: "👥", title: "Customer Portal", desc: "Full-featured portal with registration, browsing, reviews, cart, checkout (with EMI), orders, and profile management" },
               { icon: "🏭", title: "Dealer Portal", desc: "Dedicated portal with GST onboarding, dealer pricing, ordering at dealer rates, and dealer dashboard" },
               { icon: "⚙️", title: "Admin Dashboard", desc: "Comprehensive panel for products, categories, inventory, users, dealers, orders, and review moderation" },
-              { icon: "🔐", title: "Security & Conversion", desc: "reCAPTCHA v3 on all forms, product reviews system, email reminders for non-buyers, and data integrity" },
+              { icon: "🔐", title: "Security & Conversion", desc: "reCAPTCHA v3 on all forms, product reviews system, and data integrity" },
               { icon: "🚀", title: "Deployment & Go-Live", desc: "Production deployment, SSL setup, domain configuration, and comprehensive post-launch support" },
             ].map((d) => (
               <div className="deliverable-card" key={d.title}>
@@ -344,7 +340,7 @@ export default function Home() {
           <div className="card investment-card">
             <div className="investment-header">
               <div>
-                <p className="investment-label">Total Project Estimation (v1.2 with 6 new features)</p>
+                <p className="investment-label">Total Project Estimation (v1.2 with 4 new features)</p>
                 <p className="price-original">₹45,000</p>
                 <p className="investment-amount">₹31,999</p>
                 <p className="investment-note">You save ₹13,001 (28.89% off) · solo developer · 4.5–5 week end-to-end delivery · <em>GST extra as applicable</em></p>
@@ -363,8 +359,8 @@ export default function Home() {
               {[
                 { phase: "1 · Foundation, Auth & Catalog", deliv: "Setup, database, auth, reCAPTCHA, dealer onboarding, catalog & dual pricing", time: "Week 1", cost: "₹12,000" },
                 { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay + EMI, order lifecycle & tracking", time: "Week 2", cost: "₹11,000" },
-                { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, reviews moderation, email reminders, reports, emails & legal pages", time: "Week 3", cost: "₹10,000" },
-                { phase: "4 · Enhanced Features & Polish", deliv: "Reviews display, Google My Business, translator, responsive polish, Technical SEO", time: "Week 4", cost: "₹12,000" },
+                { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, reviews moderation, reports, emails & legal pages", time: "Week 3", cost: "₹10,000" },
+                { phase: "4 · Enhanced Features & Polish", deliv: "Reviews display, translator, responsive polish, Technical SEO", time: "Week 4", cost: "₹12,000" },
               ].map((r) => (
                 <div className="estimate-row" key={r.phase}>
                   <span className="e-phase">{r.phase}</span>
@@ -482,7 +478,7 @@ export default function Home() {
               { icon: "⚡", title: "Fast Delivery", desc: "Web: 4.5–5 weeks · Mobile: 3–4 weeks · Weekly milestone demos" },
               { icon: "🔒", title: "Security & Trust", desc: "reCAPTCHA v3 bot protection, JWT auth, encrypted payments, role-based access, SSL" },
               { icon: "📱", title: "Multi-Platform", desc: "Web + iOS + Android from single React Native codebase · One development team" },
-              { icon: "⭐", title: "Conversion Optimized", desc: "Product reviews, EMI payments, email reminders, push notifications for mobile" },
+              { icon: "⭐", title: "Conversion Optimized", desc: "Product reviews, EMI payments, push notifications for mobile" },
               { icon: "💬", title: "Transparent Process", desc: "Regular updates, shared staging environment, and direct communication with the team" },
               { icon: "🛠️", title: "Post-Launch Support", desc: "30-day warranty for bugs, app store support, maintenance plans available" },
             ].map((w) => (
@@ -501,7 +497,7 @@ export default function Home() {
           <h3 className="section-title">Terms &amp; Conditions</h3>
           <div className="card terms-card">
             <ul className="terms-list">
-              <li>Scope: v1.2 includes 6 conversion & security features (reviews, reCAPTCHA, EMI, reminders, translator, Google My Business)</li>
+              <li>Scope: v1.2 includes 4 conversion & security features (reviews, reCAPTCHA, EMI, translator)</li>
               <li>Timeline: 4.5–5 weeks (extended from 3.5 weeks to accommodate v1.2 features at full quality)</li>
               <li>Source code ownership transfers to the client upon final payment</li>
               <li>Client to provide Razorpay merchant account credentials and Google Cloud reCAPTCHA keys</li>
