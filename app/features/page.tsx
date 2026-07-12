@@ -11,7 +11,7 @@ export default function FeaturesComparison() {
     'Google reCAPTCHA on All Forms',
     'Product Reviews and Ratings',
     'Product Customization',
-    'Website Auto Translator (50+ Languages)',
+    'Website Auto Translator',
     'Progressive Web App (PWA)',
     'Sitemap Submission on Google',
     'Google Analytics Setup',
