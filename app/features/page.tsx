@@ -19,11 +19,14 @@ export default function FeaturesComparison() {
     'Google Analytics Setup',
     'Advanced GST Calculation (State & Product-wise)',
     'Admin Dashboard Access',
-    'Server cPanel Access',
   ];
 
   const notIncludedFeatures = [
+    'All Gold E-com Features (Full Suite)',
     'Multi-Vendor Marketplace (Amazon/Flipkart Style)',
+    'Progressive Web App (PWA)',
+    'Seller Product Adding Feature (Frontend)',
+    'Product Customization (Custom Branding)',
     'Google My Business Profile Integration',
     'Free Domain (.com, .in, .org)',
     'Free 1 Year Premium Web Hosting',
@@ -73,11 +76,11 @@ export default function FeaturesComparison() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-b divide-x">
             <div className="bg-green-600 text-white p-3 sm:p-4 md:p-6 border-b sm:border-b-0">
               <h3 className="text-base sm:text-lg md:text-lg font-bold">Features Included in Current Estimation</h3>
-              <p className="text-xs sm:text-sm opacity-90 mt-1">18 Features</p>
+              <p className="text-xs sm:text-sm opacity-90 mt-1">17 Features</p>
             </div>
             <div className="bg-red-600 text-white p-3 sm:p-4 md:p-6">
               <h3 className="text-base sm:text-lg md:text-lg font-bold">Features Not Included in This Estimation</h3>
-              <p className="text-xs sm:text-sm opacity-90 mt-1">16 Features</p>
+              <p className="text-xs sm:text-sm opacity-90 mt-1">20 Features</p>
             </div>
           </div>
 
