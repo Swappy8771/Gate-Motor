@@ -8,13 +8,11 @@ export default function FeaturesComparison() {
     'Partial Cash on Delivery Option',
     'Advanced Coupon Code System (With Expiry Time)',
     'Order Status Updates (Order Tracking for Customers)',
-    'Auto Invoice and Order Mailing System',
-    'Real-Time Stock Alerts for Customers',
     'Google reCAPTCHA on All Forms',
     'Product Reviews and Ratings',
+    'Product Customization',
     'Website Auto Translator (50+ Languages)',
-    'Location-wise Delivery Charge Adding Option',
-    'Google Search Console Setup',
+    'Progressive Web App (PWA)',
     'Sitemap Submission on Google',
     'Google Analytics Setup',
     'Advanced GST Calculation (State & Product-wise)',
@@ -24,9 +22,7 @@ export default function FeaturesComparison() {
   const notIncludedFeatures = [
     'All Gold E-com Features (Full Suite)',
     'Multi-Vendor Marketplace (Amazon/Flipkart Style)',
-    'Progressive Web App (PWA)',
     'Seller Product Adding Feature (Frontend)',
-    'Product Customization (Custom Branding)',
     'Google My Business Profile Integration',
     'Free Domain (.com, .in, .org)',
     'Free 1 Year Premium Web Hosting',
@@ -37,7 +33,9 @@ export default function FeaturesComparison() {
     'Upsell & Cross-sell Recommendations (AI)',
     'Advanced Security Suite (Firewall, Malware Scanning)',
     'Custom Backup & Restore Options',
-    'Dynamic Shipping by Pin Code',
+    'Auto Invoice and Order Mailing System',
+    'Real-Time Stock Alerts for Customers',
+    'Location-wise Delivery Charge Adding Option',
     'Website Traffic Counter',
     'Email Reminders for Non-Buyers',
     'International Payment Processing',
@@ -76,11 +74,11 @@ export default function FeaturesComparison() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-b divide-x">
             <div className="bg-green-600 text-white p-3 sm:p-4 md:p-6 border-b sm:border-b-0">
               <h3 className="text-base sm:text-lg md:text-lg font-bold">Features Included in Current Estimation</h3>
-              <p className="text-xs sm:text-sm opacity-90 mt-1">17 Features</p>
+              <p className="text-xs sm:text-sm opacity-90 mt-1">15 Features</p>
             </div>
             <div className="bg-red-600 text-white p-3 sm:p-4 md:p-6">
               <h3 className="text-base sm:text-lg md:text-lg font-bold">Features Not Included in This Estimation</h3>
-              <p className="text-xs sm:text-sm opacity-90 mt-1">20 Features</p>
+              <p className="text-xs sm:text-sm opacity-90 mt-1">16 Features</p>
             </div>
           </div>
 
