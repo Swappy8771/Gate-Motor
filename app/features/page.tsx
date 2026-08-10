@@ -17,13 +17,17 @@ export default function FeaturesComparison() {
     'Google Analytics Setup',
     'Advanced GST Calculation (State & Product-wise)',
     'Admin Dashboard Access',
+    'Multi-Vendor Marketplace (Amazon/Flipkart Style)',
+    'Seller Product Adding Feature (Seller Portal)',
+    'Seller Split Settlement & Payout Ledger (Razorpay Route)',
+    'Commission Management (Per Seller or Category)',
+    'Marketplace GST/TCS Reporting Data',
+    'Google My Business Profile Integration',
+    'Email Reminders for Non-Buyers',
   ];
 
   const notIncludedFeatures = [
     'All Gold E-com Features (Full Suite)',
-    'Multi-Vendor Marketplace (Amazon/Flipkart Style)',
-    'Seller Product Adding Feature (Frontend)',
-    'Google My Business Profile Integration',
     'Free Domain (.com, .in, .org)',
     'Free 1 Year Premium Web Hosting',
     'Shipping Integration (Ecom Express, Ekart, Delhivery)',
@@ -43,8 +47,6 @@ export default function FeaturesComparison() {
   ];
 
   const leastImportantFeatures = [
-    'Multi-Vendor Marketplace',
-    'Seller Product Adding (Frontend)',
     'Product Customization (Custom Branding)',
     'Free Domain & Hosting Bundle',
     'Country-wise Auto Currency Switch',

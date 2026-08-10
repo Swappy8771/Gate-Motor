@@ -1,7 +1,7 @@
 # Project Knowledge Base — India's No 1 Remote Gate Motor
 ## E-Commerce Platform for Gate Automation — **B2C-First · B2B-Ready**
 
-> **Status:** Final **v1.2** — 6 high-ROI features added; pricing: ~~₹45,000~~ **₹55,000** → offer **₹39,999** (27.27% off); timeline extended to 4.5–5 weeks
+> **Status:** Final **v1.3 (Marketplace)** — multi-vendor added: fourth role (**Seller**), seller portal, order splitting, Razorpay Route split settlement, payouts, GST/TCS. Pricing: ~~₹95,000~~ → offer **₹59,999** (36.84% off · save ₹35,001); timeline 9–10 weeks. **Supersedes v1.2** — see [SCOPE-AMENDMENT-v1.3](./SCOPE-AMENDMENT-v1.3.md).
 > **Vendor:** Qodeways Technologies Pvt Ltd · https://qodeways.com/
 > **Client:** India's No 1 Remote Gate Motor · Chakan MIDC, Pune 410501
 > **Stack:** Next.js 14 + Node.js/Express + PostgreSQL/Prisma + Razorpay + reCAPTCHA
@@ -40,6 +40,7 @@ Read in order if new. Jump to a module if implementing a feature. **Before build
 | 10 | [Open Decisions & Assumptions](./10-open-decisions-and-assumptions.md) | Decision log + open questions |
 | 11 | [Glossary & Validation](./11-glossary-and-validation.md) | Terms + field validation rules |
 | 12 | [Cost & Effort Estimate](./12-cost-and-effort-estimate.md) | **Internal** costing — effort breakdown, milestone math, recompute formula |
+| — | [**SCOPE-AMENDMENT-v1.3**](./SCOPE-AMENDMENT-v1.3.md) | **Current** — multi-vendor marketplace scope, four roles, budget, expenses, compliance |
 | — | [CHANGELOG](./CHANGELOG.md) | Doc version history |
 
 ## Modules
@@ -68,13 +69,15 @@ Sliding Gate Automation · Swing Gate Automation · Boom Barrier Automation · W
 |------|--------|---------|
 | Customer (B2C, primary) | Browse, buy, track, profile | Retail |
 | Dealer (B2B, extension) | After GST approval: dealer pricing & orders | Dealer (admin-set) |
-| Admin | Full platform management | Sets all pricing |
+| **Seller (marketplace, v1.3)** | After KYC approval: own catalogue, stock, orders, payouts | Sets own retail price; admin sets commission |
+| Admin | Full platform management | Sets all pricing & commission |
 
 ### The 10 canonical business rules
 Dual pricing · dealer approval gate · manual GST check · login required to buy · free shipping (₹0) · forward-only lifecycle + cancel · AWB courier-link tracking · email-only (confirmation + dealer approval) · stock deducts at payment confirmation (guarded) · immutable order + address snapshots. (Full text in [01 — Overview](./01-project-overview.md).)
 
-### What's NOT in v1.2
-GST invoice PDF · SMS · per-status emails · nested categories · in-app returns · live courier tracking · coupon codes · guest checkout · wishlist · mobile apps · multi-vendor marketplace. (See [06 — Scope Register](./06-scope-register.md).) **Note:** Reviews, EMI, reCAPTCHA, email reminders, translator, Google My Business ARE now in v1.2.
+### What's NOT in v1.3
+GST invoice PDF · SMS · per-status emails · nested categories · in-app returns · live courier tracking · coupon codes · guest checkout · wishlist · dealer pricing on seller-listed products (D-20) · seller-set shipping rates · seller subscription billing · seller mobile app (quoted separately). (See [06 — Scope Register](./06-scope-register.md).)
+**Now IN scope:** multi-vendor marketplace with seller login, order splitting, Razorpay Route split settlement, payout ledger, commission management, GST/TCS data — plus reviews, EMI, reCAPTCHA, email reminders, translator, Google My Business.
 
 ### Timeline (v1.2)
 | Week | Focus |

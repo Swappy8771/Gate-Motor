@@ -24,7 +24,7 @@ export default function Home() {
           <div className="header-meta">
             <p className="meta-label">Prepared For</p>
             <p className="meta-client">India&apos;s No 1 Remote Gate Motor</p>
-            <p className="meta-date">Date: July 2026 · v1.2 (Amended)</p>
+            <p className="meta-date">Date: August 2026 · v1.3 (Marketplace)</p>
             <span className="meta-badge">Confidential</span>
           </div>
         </div>
@@ -35,29 +35,29 @@ export default function Home() {
         <div className="hero-inner">
           <span className="hero-tag">Official Project Proposal</span>
           <h2 className="hero-title">
-            E-Commerce Platform for Gate Automation
-            <span className="hero-subtitle"> B2C-First · B2B-Ready</span>
+            Multi-Vendor Marketplace for Gate Automation
+            <span className="hero-subtitle"> Customer · Dealer · Seller · Admin</span>
           </h2>
           <p className="hero-desc">
-            A comprehensive digital commerce solution where retail customers can browse and
-            purchase gate automation products online — with extended B2B support for verified dealers,
-            and full admin control over products, inventory, and orders. Available on web, iOS, and Android.
+            A full marketplace platform where retail customers buy, verified dealers order at wholesale,
+            and third-party sellers list their own products, manage their own stock, and receive automatic
+            settlement net of commission — under one admin with complete platform control.
           </p>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-num">3</span>
-              <span className="stat-label">User Roles</span>
+              <span className="stat-num">4</span>
+              <span className="stat-label">Logins</span>
             </div>
             <div className="stat">
-              <span className="stat-num">20+</span>
-              <span className="stat-label">Features (v1.2)</span>
+              <span className="stat-num">26+</span>
+              <span className="stat-label">Features (v1.3)</span>
             </div>
             <div className="stat">
-              <span className="stat-num">4.5–5</span>
+              <span className="stat-num">9–10</span>
               <span className="stat-label">Week Delivery</span>
             </div>
             <div className="stat">
-              <span className="stat-num">6</span>
+              <span className="stat-num">7</span>
               <span className="stat-label">Deliverables</span>
             </div>
           </div>
@@ -121,7 +121,11 @@ export default function Home() {
         <section className="section">
           <div className="section-label">03</div>
           <h3 className="section-title">User Roles &amp; Access</h3>
-          <div className="three-col">
+          <p className="section-intro">
+            Four separate logins. The distinction that matters: a <strong>dealer buys</strong> at wholesale,
+            a <strong>seller sells</strong> and receives payouts. One company may hold both accounts.
+          </p>
+          <div className="four-col">
             <div className="role-card customer-role">
               <div className="role-icon">👤</div>
               <h4>Customer</h4>
@@ -146,16 +150,29 @@ export default function Home() {
                 <li>Account approval status page</li>
               </ul>
             </div>
+            <div className="role-card seller-role">
+              <div className="role-icon">📦</div>
+              <h4>Seller</h4>
+              <p className="role-tag">Marketplace · Vendor</p>
+              <ul className="role-list">
+                <li>Onboard with KYC &amp; GST documents</li>
+                <li>List &amp; manage own products</li>
+                <li>Manage own stock levels</li>
+                <li>Fulfil own orders, enter AWB</li>
+                <li>Automatic payout net of commission</li>
+                <li>Own sales reports &amp; statements</li>
+              </ul>
+            </div>
             <div className="role-card admin-role">
               <div className="role-icon">🛡️</div>
               <h4>Admin</h4>
               <p className="role-tag">Platform · Management</p>
               <ul className="role-list">
-                <li>Manage products &amp; categories</li>
-                <li>Manage inventory &amp; orders</li>
-                <li>Manage banners &amp; promotions</li>
-                <li>Approve dealers &amp; set pricing</li>
-                <li>View reports &amp; analytics</li>
+                <li>Approve sellers &amp; dealers</li>
+                <li>Set commission rates &amp; run payouts</li>
+                <li>Manage products, inventory &amp; orders</li>
+                <li>Resolve disputes, moderate listings</li>
+                <li>Platform reports &amp; GST/TCS data</li>
               </ul>
             </div>
           </div>
@@ -181,6 +198,12 @@ export default function Home() {
               { icon: "🛡️", title: "Role-based Access & Security", desc: "Separate access levels with JWT auth, reCAPTCHA protection on all forms, secure payment handling" },
               { icon: "⭐", title: "Product Reviews & Ratings", desc: "Customer reviews with 1–5 star ratings, admin moderation, and display on product pages" },
               { icon: "🌍", title: "Multi-Language Support", desc: "Website auto-translator for 50+ languages (Google Translate) to reach regional customers" },
+              { icon: "🏬", title: "Seller Onboarding", desc: "Third-party sellers register with KYC and GST documents, gated behind admin approval" },
+              { icon: "📦", title: "Seller Portal", desc: "Sellers manage their own catalogue, stock, orders, and payout ledger from a dedicated dashboard" },
+              { icon: "✂️", title: "Multi-Seller Order Splitting", desc: "One cart across several sellers becomes one payment and separate sub-orders, each fulfilled independently" },
+              { icon: "💸", title: "Split Settlement & Payouts", desc: "Razorpay Route pays each seller automatically, net of your commission, with a full payout ledger and statements" },
+              { icon: "📐", title: "Commission Management", desc: "Configurable commission by seller or category, with per-seller refund reversal handled correctly" },
+              { icon: "🧾", title: "Marketplace GST & TCS", desc: "Per-seller sales, commission and TCS data with monthly reporting output for your accountant" },
             ].map((f) => (
               <div className="feature-card" key={f.title}>
                 <span className="feature-icon">{f.icon}</span>
@@ -228,67 +251,86 @@ export default function Home() {
           <div className="timeline">
             {[
               {
-                week: "Week 1",
-                title: "Foundation, Authentication & Catalog",
+                week: "Week 1–2",
+                title: "Foundation, Four-Role Auth & Catalog",
                 color: "week1",
                 tasks: [
                   "Project setup — Next.js frontend + Node.js backend + PostgreSQL",
-                  "Database schema design & migrations",
-                  "Customer & dealer registration, login (JWT) & role-based access",
-                  "🆕 reCAPTCHA v3 integration on registration/login/dealer signup",
+                  "🆕 Marketplace schema — seller-scoped products, stock & order lines",
+                  "Customer, dealer, seller & admin authentication (JWT) + RBAC",
+                  "reCAPTCHA v3 on registration, login & signup forms",
                   "Dealer GST onboarding with admin approval workflow",
                   "Product & category management with images & specifications",
                   "Dual pricing (retail + dealer) & public catalog with search/filter",
                 ],
               },
               {
-                week: "Week 2",
+                week: "Week 3",
                 title: "Cart, Checkout, Payments & Orders",
                 color: "week2",
                 tasks: [
                   "Inventory management with live stock availability",
                   "Shopping cart & checkout with address management",
-                  "Razorpay payment integration (UPI, cards, net banking)",
-                  "🆕 EMI payment option (3/6/12 months) — Razorpay backend",
+                  "Razorpay integration (UPI, cards, net banking)",
+                  "EMI payment option (3/6/12 months)",
                   "Secure server-side payment verification & webhook",
-                  "Order creation, lifecycle & cancellation",
-                  "Order status & courier tracking (AWB + tracking link)",
+                  "Order lifecycle, cancellation & AWB courier tracking",
+                  "▲ Milestone M2 — commerce core live on staging",
                 ],
               },
               {
-                week: "Week 3",
-                title: "Admin, Reports & Notifications",
+                week: "Week 4–5",
+                title: "Seller Onboarding & Seller Portal",
                 color: "week3",
                 tasks: [
-                  "Admin dashboard — orders, dealers, inventory & banners",
-                  "🆕 Product reviews & ratings (CRUD + admin moderation queue)",
-                  "Reports & analytics (sales, revenue, top products)",
-                  "Order confirmation & dealer approval emails",
-                  "Static / legal pages (About, Contact, Privacy, Terms)",
-                  "Technical SEO setup — metadata, sitemap & robots",
+                  "🆕 Seller registration with KYC & GST document upload",
+                  "🆕 Admin seller approval queue & account states",
+                  "🆕 Seller dashboard — sales, orders & stock at a glance",
+                  "🆕 Seller catalogue CRUD with image upload",
+                  "🆕 Admin listing moderation queue",
+                  "🆕 Seller-owned stock management with audit log",
+                  "▲ Milestone M3 — sellers onboard, list & manage stock",
                 ],
               },
               {
-                week: "Week 4",
-                title: "Enhanced Features & Polish",
+                week: "Week 6–7",
+                title: "Marketplace Commerce & Settlement",
                 color: "week4",
                 tasks: [
-                  "🆕 Product reviews display on product detail pages",
-                  "🆕 Website auto-translator widget (Google Translate, 50+ languages)",
-                  "Mobile-responsive polish across all portals (including translator)",
-                  "Performance optimization & security hardening",
-                  "Technical SEO final polish",
+                  "🆕 Multi-seller cart & order splitting into sub-orders",
+                  "🆕 Per-seller totals, status & partial cancellation",
+                  "🆕 Seller fulfilment queue with AWB entry",
+                  "🆕 Razorpay Route linked accounts & split settlement",
+                  "🆕 Commission engine + per-seller refund reversal",
+                  "🆕 Payout ledger, seller statements & admin payout runs",
+                  "▲ Milestone M4 — splits & payouts working end to end",
                 ],
               },
               {
-                week: "Final ½",
-                title: "QA, Polish & Go-Live",
+                week: "Week 8",
+                title: "Admin, Reports, Compliance & Notifications",
                 color: "week5",
                 tasks: [
-                  "Comprehensive testing & UAT",
-                  "Bug fixes & quality assurance",
-                  "Production deployment, domain/SSL setup",
-                  "Go-live support & handover",
+                  "🆕 Seller management, commission config & dispute handling",
+                  "🆕 Marketplace GST/TCS data & monthly report output",
+                  "Product reviews & ratings with admin moderation",
+                  "Platform + seller-scoped reports & analytics",
+                  "Transactional emails — orders, approvals, payouts",
+                  "Static / legal pages & Technical SEO setup",
+                ],
+              },
+              {
+                week: "Week 9–10",
+                title: "Enhanced Features, Security & Go-Live",
+                color: "week6",
+                tasks: [
+                  "Website auto-translator & Google My Business integration",
+                  "Responsive polish across all four portals",
+                  "🆕 Row-level authorisation test pass — no cross-seller data access",
+                  "Performance optimization & security hardening",
+                  "Four-role UAT, bug fixes & seller onboarding walkthrough",
+                  "Production deployment, domain/SSL & handover",
+                  "▲ Milestone M5 — go-live",
                 ],
               },
             ].map((phase) => (
@@ -315,11 +357,12 @@ export default function Home() {
           <h3 className="section-title">Deliverables</h3>
           <div className="deliverables-grid">
             {[
-              { icon: "🌐", title: "Public Website", desc: "Responsive marketing site with product catalog, reviews, translator, and Technical SEO" },
+              { icon: "🌐", title: "Public Website", desc: "Responsive marketplace storefront with combined catalogue, reviews, translator, and Technical SEO" },
               { icon: "👥", title: "Customer Portal", desc: "Full-featured portal with registration, browsing, reviews, cart, checkout (with EMI), orders, and profile management" },
               { icon: "🏭", title: "Dealer Portal", desc: "Dedicated portal with GST onboarding, dealer pricing, ordering at dealer rates, and dealer dashboard" },
-              { icon: "⚙️", title: "Admin Dashboard", desc: "Comprehensive panel for products, categories, inventory, users, dealers, orders, and review moderation" },
-              { icon: "🔐", title: "Security & Conversion", desc: "reCAPTCHA v3 on all forms, product reviews system, and data integrity" },
+              { icon: "📦", title: "Seller Portal", desc: "Seller onboarding with KYC, own catalogue and stock management, order fulfilment queue, payout ledger, and seller-scoped reports" },
+              { icon: "⚙️", title: "Admin Dashboard", desc: "Seller and dealer approval, commission configuration, payout runs, dispute handling, products, inventory, orders, and review moderation" },
+              { icon: "🔐", title: "Security & Compliance", desc: "reCAPTCHA v3 on all forms, row-level authorisation across four roles, and marketplace GST/TCS reporting data" },
               { icon: "🚀", title: "Deployment & Go-Live", desc: "Production deployment, SSL setup, domain configuration, and comprehensive post-launch support" },
             ].map((d) => (
               <div className="deliverable-card" key={d.title}>
@@ -340,12 +383,12 @@ export default function Home() {
           <div className="card investment-card">
             <div className="investment-header">
               <div>
-                <p className="investment-label">Total Project Estimation (v1.2 with 4 new features)</p>
-                <p className="price-original">₹45,000</p>
-                <p className="investment-amount">₹31,999</p>
-                <p className="investment-note">You save ₹13,001 (28.89% off) · solo developer · 4.5–5 week end-to-end delivery · <em>GST extra as applicable</em></p>
+                <p className="investment-label">Total Project Estimation (v1.3 — Multi-Vendor Marketplace)</p>
+                <p className="price-original">₹95,000</p>
+                <p className="investment-amount">₹59,999</p>
+                <p className="investment-note">You save ₹35,001 (36.84% off) · solo developer · 9–10 week end-to-end delivery · <em>GST extra as applicable</em></p>
               </div>
-              <div className="investment-badge">28.89%<span className="off-label">OFF</span></div>
+              <div className="investment-badge">36.84%<span className="off-label">OFF</span></div>
             </div>
 
             <p className="estimate-caption">Cost &amp; Time Estimation</p>
@@ -357,10 +400,12 @@ export default function Home() {
                 <span>Cost</span>
               </div>
               {[
-                { phase: "1 · Foundation, Auth & Catalog", deliv: "Setup, database, auth, reCAPTCHA, dealer onboarding, catalog & dual pricing", time: "Week 1", cost: "₹12,000" },
-                { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay + EMI, order lifecycle & tracking", time: "Week 2", cost: "₹11,000" },
-                { phase: "3 · Admin, Reports & Notifications", deliv: "Admin dashboard, reviews moderation, reports, emails & legal pages", time: "Week 3", cost: "₹10,000" },
-                { phase: "4 · Enhanced Features & Polish", deliv: "Reviews display, translator, responsive polish, Technical SEO", time: "Week 4", cost: "₹12,000" },
+                { phase: "1 · Foundation & Catalog", deliv: "Setup, four-role schema, auth, RBAC, reCAPTCHA, dealer onboarding, catalog & dual pricing", time: "Week 1–2", cost: "₹18,000" },
+                { phase: "2 · Cart, Payments & Orders", deliv: "Inventory, cart, checkout, Razorpay + EMI, order lifecycle & AWB tracking", time: "Week 3", cost: "₹14,000" },
+                { phase: "3 · Seller Onboarding & Portal", deliv: "KYC & approval, seller dashboard, catalogue, inventory, moderation queue", time: "Week 4–5", cost: "₹22,000" },
+                { phase: "4 · Marketplace Commerce", deliv: "Order splitting, seller fulfilment, Route split settlement, commission engine, payout ledger", time: "Week 6–7", cost: "₹24,000" },
+                { phase: "5 · Admin, Reports & Compliance", deliv: "Seller management, commission config, disputes, reviews, reports, GST/TCS data, emails", time: "Week 8", cost: "₹10,000" },
+                { phase: "6 · Polish, Security & Go-Live", deliv: "Translator, GMB, responsive polish, authorisation test pass, UAT, deployment & SSL", time: "Week 9–10", cost: "₹7,000" },
               ].map((r) => (
                 <div className="estimate-row" key={r.phase}>
                   <span className="e-phase">{r.phase}</span>
@@ -370,14 +415,14 @@ export default function Home() {
                 </div>
               ))}
               <div className="estimate-total">
-                <span className="e-phase">Total Estimation (v1.2)</span>
+                <span className="e-phase">Total Estimation (v1.3)</span>
                 <span className="e-deliv" />
-                <span className="e-time">4.5–5 weeks</span>
-                <span className="e-cost"><span className="e-strike">₹45,000</span>₹31,999</span>
+                <span className="e-time">9–10 weeks</span>
+                <span className="e-cost"><span className="e-strike">₹95,000</span>₹59,999</span>
               </div>
             </div>
 
-            <p className="estimate-caption">Payment Schedule · on offer price ₹31,999</p>
+            <p className="estimate-caption">Payment Schedule · on offer price ₹59,999</p>
             <div className="milestone-table">
               <div className="milestone-header">
                 <span>Milestone</span>
@@ -386,9 +431,11 @@ export default function Home() {
                 <span>Amount</span>
               </div>
               {[
-                { milestone: "Project Kickoff", trigger: "On agreement signing", pct: "30%", amt: "₹9,600" },
-                { milestone: "Mid Delivery", trigger: "After Week 2 — commerce core complete", pct: "40%", amt: "₹12,800" },
-                { milestone: "Final Delivery", trigger: "Post go-live & handover", pct: "30%", amt: "₹9,600" },
+                { milestone: "M1 · Kickoff", trigger: "On agreement signing", pct: "20%", amt: "₹12,000" },
+                { milestone: "M2 · Commerce Core", trigger: "End Week 3 — catalog, cart, payments & orders on staging", pct: "20%", amt: "₹12,000" },
+                { milestone: "M3 · Seller Portal", trigger: "End Week 5 — sellers onboard, list & manage stock", pct: "25%", amt: "₹15,000" },
+                { milestone: "M4 · Split Settlement", trigger: "End Week 7 — order splits & payouts end to end", pct: "20%", amt: "₹12,000" },
+                { milestone: "M5 · Final Delivery", trigger: "Post go-live & handover", pct: "15%", amt: "₹8,999" },
               ].map((m) => (
                 <div className="milestone-row" key={m.milestone}>
                   <span className="m-name">{m.milestone}</span>
@@ -408,10 +455,10 @@ export default function Home() {
           <div className="card investment-card">
             <div className="investment-header">
               <div>
-                <p className="investment-label">Total Project Estimation</p>
+                <p className="investment-label">Total Project Estimation — Customer + Dealer Apps</p>
                 <p className="price-original">₹75,000</p>
                 <p className="investment-amount">₹49,999</p>
-                <p className="investment-note">You save ₹25,001 · solo developer · 3–4 week end-to-end delivery · <em>GST extra as applicable</em></p>
+                <p className="investment-note">You save ₹25,001 · solo developer · 3–4 week end-to-end delivery, after web go-live · <em>GST extra as applicable</em></p>
               </div>
               <div className="investment-badge">33.33%<span className="off-label">OFF</span></div>
             </div>
@@ -466,6 +513,16 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            <div className="notice">
+              <p className="notice-tag">Optional add-on — Seller App</p>
+              <p>
+                A native seller app (order queue, stock updates, payout view) is <strong>₹20,000 → ₹14,999</strong>,
+                roughly 12 developer-days. Sellers can use the responsive web portal instead, so this is genuinely
+                optional. Full programme — web marketplace plus customer and dealer apps —{" "}
+                <strong>₹1,09,998</strong> against a ₹1,70,000 list; with the seller app, ₹1,24,997.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -497,15 +554,18 @@ export default function Home() {
           <h3 className="section-title">Terms &amp; Conditions</h3>
           <div className="card terms-card">
             <ul className="terms-list">
-              <li>Scope: v1.2 includes 4 conversion & security features (reviews, reCAPTCHA, EMI, translator)</li>
-              <li>Timeline: 4.5–5 weeks (extended from 3.5 weeks to accommodate v1.2 features at full quality)</li>
+              <li>This revision (v1.3) supersedes v1.2 in full; the earlier single-seller quote is withdrawn</li>
+              <li>Scope: four-role marketplace — customer, dealer, seller and admin, per the v1.3 scope document</li>
+              <li>Timeline: 9–10 weeks, extended to build the seller portal, order splitting and split settlement at full quality</li>
               <li>Source code ownership transfers to the client upon final payment</li>
-              <li>Client to provide Razorpay merchant account credentials and Google Cloud reCAPTCHA keys</li>
-              <li>Hosting and domain costs are borne by the client unless agreed otherwise</li>
+              <li>Client to provide a Razorpay account with <strong>Route activated</strong>, plus Google Cloud reCAPTCHA keys</li>
+              <li>Client to confirm commission policy, payout cadence and seller agreement copy by day one</li>
+              <li>Hosting, domain, gateway fees and third-party services are borne by the client</li>
+              <li>TCS registration, deposits and monthly GSTR-8 filings are the client&apos;s obligation</li>
               <li>Any scope additions post-agreement will be quoted and approved separately</li>
               <li>Design revisions up to 2 rounds per milestone are included in the scope</li>
               <li>Proposal valid for 15 days from the date of submission</li>
-              <li>30-day post-launch warranty for bugs within agreed scope (v1.2 baseline)</li>
+              <li>30-day post-launch warranty for bugs within agreed scope (v1.3 baseline)</li>
             </ul>
           </div>
         </section>
@@ -699,8 +759,17 @@ export default function Home() {
         .bullet-list li { padding: 0.4rem 0 0.4rem 1.4rem; position: relative; font-size: 1rem; font-weight: 500; color: #475569; }
         .bullet-list li::before { content: '→'; position: absolute; left: 0; color: #3b82f6; font-weight: 700; }
 
-        /* ── THREE COL ── */
+        .section-intro {
+          font-size: clamp(0.98rem, 2vw, 1.05rem);
+          font-weight: 500;
+          color: #475569;
+          max-width: 70ch;
+          margin-bottom: 1.25rem;
+        }
+
+        /* ── THREE / FOUR COL ── */
         .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        .four-col  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         .role-card {
           background: white;
           border-radius: 14px;
@@ -715,6 +784,7 @@ export default function Home() {
         .role-card:hover { transform: translateY(-3px); }
         .customer-role { border-top: 4px solid #3b82f6; }
         .dealer-role   { border-top: 4px solid #10b981; }
+        .seller-role   { border-top: 4px solid #8b5cf6; }
         .admin-role    { border-top: 4px solid #f59e0b; }
         .role-icon { font-size: 2.5rem; margin-bottom: 0.6rem; }
         .role-card h4 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.25rem; }
@@ -790,6 +860,8 @@ export default function Home() {
         .week2 .timeline-marker::after { box-shadow: 0 0 0 2px #06b6d4; background: #06b6d4; }
         .week3 .timeline-marker::after { box-shadow: 0 0 0 2px #10b981; background: #10b981; }
         .week4 .timeline-marker::after { box-shadow: 0 0 0 2px #f59e0b; background: #f59e0b; }
+        .week5 .timeline-marker::after { box-shadow: 0 0 0 2px #8b5cf6; background: #8b5cf6; }
+        .week6 .timeline-marker::after { box-shadow: 0 0 0 2px #ef4444; background: #ef4444; }
         .timeline-week { font-size: 0.82rem; font-weight: 800; color: #64748b; text-transform: uppercase; }
         .timeline-content {
           flex: 1;
@@ -801,6 +873,8 @@ export default function Home() {
         .week2 .timeline-content { border-left: 4px solid #06b6d4; }
         .week3 .timeline-content { border-left: 4px solid #10b981; }
         .week4 .timeline-content { border-left: 4px solid #f59e0b; }
+        .week5 .timeline-content { border-left: 4px solid #8b5cf6; }
+        .week6 .timeline-content { border-left: 4px solid #ef4444; }
         .timeline-content h4 { font-size: 1.08rem; font-weight: 800; margin-bottom: 0.65rem; color: #1e293b; }
         .timeline-content ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem; }
         .timeline-content li { font-size: 0.93rem; font-weight: 500; color: #475569; padding-left: 1.1rem; position: relative; }
@@ -853,6 +927,21 @@ export default function Home() {
         .estimate-total .e-phase, .estimate-total .e-time { font-weight: 800; }
         .estimate-total .e-cost { color: #16a34a; }
         .e-strike { text-decoration: line-through; color: #94a3b8; font-weight: 700; font-size: 0.82em; margin-right: 0.45rem; }
+
+        /* ── NOTICE ── */
+        .notice {
+          margin-top: 1.25rem;
+          background: #fffbeb;
+          border: 1px solid #fde68a;
+          border-left: 4px solid #f59e0b;
+          border-radius: 8px;
+          padding: 1rem 1.15rem;
+        }
+        .notice-tag {
+          font-size: 0.78rem; font-weight: 800; color: #92400e;
+          text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem;
+        }
+        .notice p:not(.notice-tag) { font-size: 0.92rem; font-weight: 500; color: #475569; }
 
         .milestone-table { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
         .milestone-header {
@@ -926,6 +1015,7 @@ export default function Home() {
 
         @media (max-width: 1024px) {
           .features-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+          .four-col { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -965,6 +1055,7 @@ export default function Home() {
           .section { margin-bottom: 2.5rem; }
           .two-col    { grid-template-columns: 1fr; }
           .three-col  { grid-template-columns: 1fr; }
+          .four-col   { grid-template-columns: 1fr; }
           .why-grid   { grid-template-columns: 1fr; }
           .features-grid { grid-template-columns: 1fr; }
           .timeline::before { display: none; }
